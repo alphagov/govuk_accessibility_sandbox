@@ -1,20 +1,17 @@
 # Accessibility Sandbox
 
-A place to build and view components with accessibility in mind and get feedback from the community and beyond.
+A place to build and test accessible components.
 
+## Prerequisites
+* [Node.js][Node]
+* [NPM]
 
-#### Install dependencies
-
-Open a command line app (Terminal on OSX) and change to the unzipped directory. Then run:
-
+## Installation
 ```
 npm install
 ```
 
-This will install extra code that the prototype kit needs.
-
-#### Run the app
-
+## Usage
 ```
 npm start
 ```
