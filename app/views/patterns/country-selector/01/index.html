@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
+{% block head %}
+{{ super() }}
+<link href="/public/patterns/country-selector/01/styles.css" media="all" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 {% block content %}
 
 <main id="content" role="main">
@@ -106,8 +111,8 @@
 {% block body_end %}
 {{ super() }}
   <!-- Country selector -->
-  <script src="/public/country-selector/01/selectToAutocomplete/jquery-ui.min.js"></script>
-  <script src="/public/country-selector/01/selectToAutocomplete/jquery.select-to-autocomplete.js"></script>
+  <script src="/public/patterns/country-selector/01/jquery-ui.min.js"></script>
+  <script src="/public/patterns/country-selector/01/jquery.select-to-autocomplete.js"></script>
 
   <script>
     (function($){
