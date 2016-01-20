@@ -1,19 +1,17 @@
 {% extends "layout.html" %}
 
-
-
 {% block content %}
 
 <main id="content" role="main">
+
+  {% include "includes/breadcrumb-patterns-country-selector.html" %}
+
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">
-        <span class="heading-secondary">
-        Country selector
-        </span>
-        Demo 01
-      </h1>
+      <h1 class="heading-xlarge">Country selector</h1>
+
+      <h2 class="heading-medium">Example 1</h2>
 
       <p>Country selector, using data from <a href="http://country.openregister.org">country.openregister.org</a>.</p>
 
@@ -96,8 +94,6 @@
       <p>This data has been extended with weightings and aliases attributes.</p>
 
       <p>These are stored in '/app/data/country-records-extension.json'</p>
-
-      <p><a href="register">You can see the extended attributes here</a></p> 
 
 
     </div>
