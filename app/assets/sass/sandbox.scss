@@ -1,0 +1,22 @@
+h1 {
+  @extend .heading-xlarge;
+}
+
+h2 {
+  @extend .heading-medium;
+}
+
+h3 {
+  @extend .heading-small;
+}
+
+
+.example {
+  border: 1px solid #0b0c0c;
+  padding: 20px;
+  overflow: auto;
+}
+
+main {
+  outline: 0;
+}
