@@ -85,10 +85,10 @@ button .subsection__title {
   width: 16px;
 
   // https://css-tricks.com/a-complete-guide-to-svg-fallbacks/
-  // PNG fallback for SVG (does this work in IE7?)
-  background-image: url('/public/images/icons/icons.png');
+  // PNG fallback for SVG
+  background-image: url('/public/images/service-manual-disclosure/icons.png');
   // SVG sprite
-  background: url("/public/images/icons/icons.svg"), linear-gradient(transparent, transparent);
+  background: url("/public/images/service-manual-disclosure/icons.svg"), linear-gradient(transparent, transparent);
   background-repeat: no-repeat;
 
   display: none;
