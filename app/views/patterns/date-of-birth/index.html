@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Date of birth
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+    {% include "includes/breadcrumb_examples.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                Date of birth
+            </h1>
+
+            <p>The pattern for collecting date of birth from users is to have 3 text input for Day, Month and Year, each with there own labels. These are found under 'Date of bith' text and a hint providing an example.</p>
+
+            <div class="example">
+                <img src="/public/images/date-of-birth.png" width="225" height="159" alt="Screen shot of the Date of birth pattern" />
+            </div>
+
+            <h2 class="heading-medium">Accessibility success criteria</h2>
+
+            <ul class="list list-bullet">
+                <li>The 'Date of birth' text needs to be associated with all the fields that text fields</li>
+                <li>The hint text needs to be associated with the text inputs so they are announced as a screen reader users tab through the form</li>
+                <li>The 'Day', 'Month' and 'Year' labels need to be associated with the the relevant text fields</li>
+                <li>The year of birth needs to be a range that is not unusable for users using a spon wheel on a mobile device</li>
+                <li>The text needs to meet colour contrast requirements</li>
+                <li>The form needs to be usable when the font size is increased.</li>
+            </ul>
+
+            <h2 class="heading-medium">Demos</h2>
+            <ul class="list list-bullet">
+                <li><a href="01/">Demo 01</a></li>
+            </ul>
+
+            <h2 class="heading-medium">Further reading</h2>
+            <ul>
+                <li><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/dates.html">Design pattern: Memorable dates</a></li>
+            </ul>
+
+        </div>
+    </div>
+</main>
+
+<h2 class="heading-medium">Your other address</h2>
+<fieldset>
+    <legend class="visuallyhidden">
+        Your other address
+    </legend>
+
+    <div class="form-group form-group-compound">
+        <label class="form-label" for="address-line-1">Street</label>
+        <input class="form-control" type="text" id="address-line-1">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+        <input class="form-control" type="text" id="address-line-2">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="address-town">Town or City</label>
+        <input class="form-control form-control-1-4" type="text" id="address-town">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="address-postcode">Postcode</label>
+        <input class="form-control form-control-1-8" type="text" id="address-postcode">
+    </div>
+</fieldset>
+{% endblock %}
