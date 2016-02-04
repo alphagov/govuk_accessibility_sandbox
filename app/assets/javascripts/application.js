@@ -124,4 +124,8 @@ $(document).ready(function() {
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
 
+  // Find and start GOV.UK modules
+  // https://github.com/alphagov/govuk_frontend_toolkit/blob/master/docs/javascript.md#modules
+  GOVUK.modules.start();
+
 });
