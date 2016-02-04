@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Demo 2 - Disclosure
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+    {% include "includes/breadcrumb_examples.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+                <h1 class="heading-xlarge">
+                    Demo 2 - Disclosure
+                </h1>
+
+                <h2 class="heading-medium">Implementation</h2>
+
+                <div class="example">
+<button id="button" aria-expanded="false" aria-controls="content">Help with nationality <span id="icon" aria-hidden="true></span></button>
+
+<div id="content" aria-hidden="true">
+
+    <div class="panel panel-border-narrow">
+        <p>If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+      </p>
+
+      <p>
+        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have
+to send copies of identity documents through the post.
+      </p>
+
+    </div>
+
+                </div>
+
+                <h2 class="heading-medium">Results</h2>
+                <p>The component is yet to be tested...</p>
+
+            </form>
+
+        </div>
+    </div>
+</main>
+{% endblock %}

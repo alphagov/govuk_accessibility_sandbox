@@ -9,3 +9,10 @@
 // Patterns
 @import 'patterns/check-your-answers';
 @import 'patterns/accordion-with-descriptions';
+@import 'patterns/disclosure-demo2';
+
+.example {
+  border: 1px solid #0b0c0c;
+  padding: 20px;
+  overflow: auto;
+}
