@@ -1,0 +1,116 @@
+// Helper classes for showing and hiding
+
+// Set hidden states
+.if-no-js-hide,
+.js-enabled .if-js-hide,
+.js-enabled .is-hidden {
+  display: none;
+}
+
+// Show when JS is enabled
+.js-enabled .if-no-js-hide {
+  display: block;
+}
+
+
+// Open/Close all button
+.subsection-controls {
+  @extend %contain-floats;
+}
+
+.subsection-controls button {
+  float: right;
+
+  @include core-16;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: $link-colour;
+  text-decoration: underline;
+
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+// Subsections
+.subsection-wrapper {
+  border-top: 1px solid $border-colour;
+}
+
+.subsection {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid $border-colour;
+}
+
+.subsection__button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: #FFF;
+  padding: 1em 0;
+  &:hover {
+    cursor: pointer;
+    background: $highlight-colour;
+  }
+}
+
+
+.subsection__title {
+  @include bold-19;
+  color: $govuk-blue;
+  padding-top: 1em;
+}
+
+button .subsection__title {
+  padding-top: 0;
+}
+
+
+.subsection__description {
+  display: block;
+  @include core-16;
+  color: $secondary-text-colour;
+  margin-bottom: 0;
+}
+
+
+.subsection__icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+
+  height: 16px;
+  width: 16px;
+
+  // https://css-tricks.com/a-complete-guide-to-svg-fallbacks/
+  // PNG fallback for SVG (does this work in IE7?)
+  background-image: url('/public/images/icons/icons.png');
+  // SVG sprite
+  background: url("/public/images/icons/icons.svg"), linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+
+  display: none;
+
+}
+
+.is-open .subsection__icon {
+  background-position: 0 0;
+}
+
+.is-closed .subsection__icon {
+  background-position: 0 -16px;
+}
+
+.subsection__items {
+  padding-bottom: 0.5em;
+}
+
+.subsection__items li {
+  margin-bottom: 0.25em;
+}
+
+.subsection__items li a {
+  text-decoration: none;
+}
