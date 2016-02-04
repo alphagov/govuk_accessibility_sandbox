@@ -1,14 +1,16 @@
-h1 {
-  @extend .heading-xlarge;
-}
+// GL: Please don't do this, these styles will override any imported patterns
 
-h2 {
-  @extend .heading-medium;
-}
+// h1 {
+//   @extend .heading-xlarge;
+// }
 
-h3 {
-  @extend .heading-small;
-}
+// h2 {
+//   @extend .heading-medium;
+// }
+
+// h3 {
+//   @extend .heading-small;
+// }
 
 
 .example {
