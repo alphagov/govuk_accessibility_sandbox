@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Disclosure
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+    {% include "includes/breadcrumb_examples.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                Disclosure
+            </h1>
+
+            <p>The pattern for disclosing content is to have a button that toggles the display of additional information.</p>
+
+            <div class="example">
+                <img src="/public/images/date-of-birth.png" width="225" height="159" alt="Screen shot of the Date of birth pattern" />
+            </div>
+
+            <h2 class="heading-medium">Accessibility success criteria</h2>
+
+            <ul class="list list-bullet">
+                <li>It must be possible to focus on the disclosure button using the tab key.</li>
+				<li>The disclosure button must change in appearance when keyboard focus moves to it.</li>
+				<li>It must be possible to activate the disclosure button using the space and enter keys.</li>
+				<li>The disclosure button must change in appearance when the mouse is hovered over it.</li>
+				<li>It must be possible to activate the disclosure button using a click.</li>
+				<li>The disclosure button must be large enough to tap accurately with one finger.</li>
+				<li>The disclosure button must change in appearance to indicate the touch-down state (see General #4).</li>
+				<li>It must be possible to activate the disclosure button using standard button voice commands.</li>
+				<li>The expanded/collapsed state of the disclosure widget must be available in the code.</li>
+				<li>The relationship between the disclosure button and disclosed content must be available in the code.</li>
+				<li>It must be possible to focus on the disclosure button using standard screen reader button commands.</li>
+				<li>The disclosure button must have a visible text label.</li>
+				<li>The disclosure button text label must use a default font size that makes reading comfortable.</li>
+				<li>The contrast between the disclosure button text label and its background must meet (or exceed) a ratio of 4.5:1.</li>
+				<li>The disclosure button must change appearance when it is expanded/collapsed.</li>
+            </ul>
+
+            <h2 class="heading-medium">Demos</h2>
+            <ul class="list list-bullet">
+                <li><a href="01/">Demo 01</a></li>
+            </ul>
+
+            <h2 class="heading-medium">Further reading</h2>
+            <ul>
+                <li><a href="https://designpatterns.hackpad.com/Progressive-disclosure-mi03xhbZQpu">Design pattern: Progressive disclosure</a></li>
+            </ul>
+
+        </div>
+    </div>
+</main>
+
+<h2 class="heading-medium">Your other address</h2>
+<fieldset>
+    <legend class="visuallyhidden">
+        Your other address
+    </legend>
+
+    <div class="form-group form-group-compound">
+        <label class="form-label" for="address-line-1">Street</label>
+        <input class="form-control" type="text" id="address-line-1">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+        <input class="form-control" type="text" id="address-line-2">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="address-town">Town or City</label>
+        <input class="form-control form-control-1-4" type="text" id="address-town">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="address-postcode">Postcode</label>
+        <input class="form-control form-control-1-8" type="text" id="address-postcode">
+    </div>
+</fieldset>
+{% endblock %}
