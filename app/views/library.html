@@ -137,36 +137,64 @@ Prototype toolkit patterns
                     </div>
                 </div>
 
-                <h3>Date of birth</h3>
+
+                <h3>Date of birth 1</h3>
                 <div class="example">
-                    <div class="form-group">
-                        <fieldset>
-                            <legend class="form-label-bold">Date of birth</legend>
+                    <h2 class="heading-small">What is your date of birth?</h2>
+                    <fieldset>
+                        <legend class="visuallyhidden">Date of birth</legend>
 
-                            <div class="form-date">
+                        <div class="form-date">
 
-                                <p class="form-hint">For example, 31 3 1980</p>
+                            <p class="form-hint">For example, 31 3 1980</p>
 
-                                <div class="form-group form-group-day">
-                                    <label for="dob-day">Day</label>
-                                    <input class="form-control" id="dob-day" type="number" min="0" max="31">
-                                </div>
-
-                                <!-- choosing number for month may be cognitively difficult for some people -->
-                                <div class="form-group form-group-month">
-                                    <label for="dob-month">Month</label>
-                                    <input class="form-control" id="dob-month" type="number" min="0" max="12">
-                                </div>
-
-                                <div class="form-group form-group-year">
-                                    <label for="dob-year">Year</label>
-                                    <input class="form-control" id="dob-year" type="number" min="0" max="2014">
-                                </div>
+                            <div class="form-group form-group-day">
+                                <label for="dob-day">Day</label>
+                                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
                             </div>
 
-                        </fieldset>
-                    </div>
+                            <div class="form-group form-group-month">
+                                <label for="dob-month">Month</label>
+                                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            </div>
+
+                            <div class="form-group form-group-year">
+                                <label for="dob-year">Year</label>
+                                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                            </div>
+                        </div>
+
+                    </fieldset>
                 </div>
+
+                <h3>Date of birth 2</h3>
+                <div class="example">
+                    <fieldset>
+                        <legend class="form-label-bold">Date of birth</legend>
+
+                        <div class="form-date">
+
+                            <p class="form-hint">For example, 31 3 1980</p>
+
+                            <div class="form-group form-group-day">
+                                <label for="dob-day">Day</label>
+                                <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            </div>
+
+                            <div class="form-group form-group-month">
+                                <label for="dob-month">Month</label>
+                                <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            </div>
+
+                            <div class="form-group form-group-year">
+                                <label for="dob-year">Year</label>
+                                <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
 
                 <h3>Address</h3>
                 <div class="example">
