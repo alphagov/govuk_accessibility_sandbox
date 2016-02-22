@@ -16,15 +16,15 @@
       var $targets = $element.find('.js-toggle-disclosure-target');
       $targets.attr('aria-hidden', 'true');
 
-      // The accordion panel uses the role tabpanel and should have an aria-labelledby relationship
-      // referencing the corresponding header having a role of tab
+      // The accordion panel uses the role tabpanel
       $targets.attr('role', 'tabpanel');
 
       // Add an ID to each one
       $targets.each(function(index) {
         var i = index + 1;
         $(this).attr("id", "subsection-" + i);
-        $(this).attr("aria-labelledby", "subsection-" + i);
+        // The accordion panel should have an aria-labelledby relationship, referencing the corresponding header
+        $(this).attr("aria-labelledby", "subsection-header" + i);
       });
 
       // Get all of the headings
@@ -33,9 +33,10 @@
       // Set the aria controls attribute for each one
       $headings.each(function(index) {
         var i = index + 1;
-        $(this).attr("aria-controls", "subsection-" + i);
 
-        // Each header tab in the tablist has a role of tab
+        // The accordion panel should have an aria-labelledby relationship, referencing the corresponding header, having a role of tab
+        $(this).attr("id", "subsection-header" + i);
+        $(this).attr("aria-controls", "subsection-" + i);
         $(this).attr("role", "tab");
         // Ensure it is possible to tab to each heading
         $(this).attr("tabindex", "0");
@@ -56,11 +57,9 @@
           var $subsection = $heading.closest('.subsection');
 
           $target.removeAttr('class','if-js-hide');
-
           $target.attr('aria-hidden', 'false');
 
           $heading.attr('aria-expanded', 'true');
-          $heading.attr("tabindex","0");
 
           $subsection.removeClass('is-closed');
           $subsection.addClass('is-open');
@@ -79,7 +78,6 @@
           $target.attr('aria-hidden', 'true');
 
           $heading.attr('aria-expanded', 'false');
-          $heading.attr("tabindex","0");
 
           $subsection.removeClass('is-open');
           $subsection.addClass('is-closed');
