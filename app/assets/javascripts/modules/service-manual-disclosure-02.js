@@ -60,7 +60,7 @@
           $target.attr('aria-hidden', 'false');
 
           $heading.attr('aria-expanded', 'true');
-          $heading.attr("tabindex","-1");
+          $heading.attr("tabindex","0");
 
           $subsection.removeClass('is-closed');
           $subsection.addClass('is-open');
