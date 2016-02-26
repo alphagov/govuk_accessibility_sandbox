@@ -280,4 +280,43 @@
     text-decoration: none;
   }
 
+  // javascript inserted markup
+  .subsection__link {
+    text-decoration: none;
+    color: $govuk-blue;
+  }
+
+  .js-hide {
+    display: none;
+  }
+
+  .subsection__icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    height: 15px;
+    width: 16px;
+
+    // https://css-tricks.com/a-complete-guide-to-svg-fallbacks/
+    // PNG fallback for SVG
+    background-image: url('/public/images/service-manual-disclosure/icons.png');
+    // SVG sprite
+    background: url("/public/images/service-manual-disclosure/icons.svg"), linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-position: 0 -16px;
+  }
+
+  .is-open .subsection__icon {
+    background-position: 0 0;
+  }
+
+
+  .js .subsection__header {
+    &:hover {
+      cursor: pointer;
+      background: $highlight-colour;
+    }
+  }
+
 }
