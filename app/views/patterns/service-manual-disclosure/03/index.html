@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Demo 3 - Service Manual - disclosure widget
+{% endblock %}
+
+{% block content %}
+<main class="service-manual-disclosure-03" id="content" role="main">
+
+  {% include "includes/breadcrumb_examples.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Demo 3 - Service Manual - disclosure widget
+      </h1>
+
+      <div class="subsections" data-module="service-manual-disclosure">
+
+        <div class="subsection-controls">
+
+        </div>
+        <div class="subsection-wrapper">
+
+          <div class="subsection">
+            <div class="subsection__header">
+              <h2 class="subsection__title">
+                This is the heading for subsection 1
+              </h2>
+              <p class="subsection__description">
+                This is the description for subsection 1
+              </p>
+            </div>
+
+            <div class="subsection__content">
+              <ul class="subsection__items">
+                <li><a href="#">Subsection 1 - link 1</a></li>
+                <li><a href="#">Subsection 1 - link 2</a></li>
+                <li><a href="#">Subsection 1 - link 3</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection__header">
+                <h2 class="subsection__title">
+                  This is the heading for subsection 2
+                </h2>
+                <p class="subsection__description">
+                  This is the description for subsection 2
+                </p>
+            </div>
+
+            <div class="subsection__content">
+              <ul class="subsection__items">
+                <li><a href="#">Subsection 2 - link 1</a></li>
+                <li><a href="#">Subsection 2 - link 2</a></li>
+                <li><a href="#">Subsection 2 - link 3</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection__header">
+              <h2 class="subsection__title">
+                This is the heading for subsection 3
+              </h2>
+              <p class="subsection__description">
+                This is the description for subsection 3
+              </p>
+            </div>
+
+            <div class="subsection__content">
+              <ul class="subsection__items">
+                <li><a href="#">Subsection 3 - link 1</a></li>
+                <li><a href="#">Subsection 3 - link 2</a></li>
+                <li><a href="#">Subsection 3 - link 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

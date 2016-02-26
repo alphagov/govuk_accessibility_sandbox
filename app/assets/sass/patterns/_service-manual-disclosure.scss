@@ -228,3 +228,56 @@
     text-decoration: none;
   }
 }
+
+.service-manual-disclosure-03 {
+  // Make open and close buttons look like links
+  .subsection-controls {
+    @extend %contain-floats;
+    min-height: 35px;
+
+    .js-open-close {
+      float: right;
+
+      @include core-16;
+      display: inline-block;
+      color: $link-colour;
+      padding: 0.5em 0;
+    }
+  }
+
+  .subsection-wrapper {
+    border-bottom: 1px solid $border-colour;
+  }
+
+  .subsection__header {
+    padding: 0.6em 0;
+    border-top: 1px solid $border-colour;
+    position: relative;
+  }
+
+  .subsection__title {
+    @include bold-19;
+    padding-top: 0;
+    padding-top: 0;
+  }
+
+  .subsection__description {
+    display: block;
+    @include core-16;
+    color: $secondary-text-colour;
+    margin-bottom: 0;
+  }
+
+  .subsection__items {
+    padding-bottom: 0.5em;
+  }
+
+  .subsection__items li {
+    margin-bottom: 0.25em;
+  }
+
+  .subsection__items li a {
+    text-decoration: none;
+  }
+
+}
