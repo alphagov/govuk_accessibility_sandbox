@@ -10,11 +10,12 @@
 
             // insert the markup for the subsection-controls
             $element.find('.subsection-controls')
-                .append( '<a href="#" class="js-open-close">Open all</a>' );
+                .append( '<a href="#" class="js-open-close" aria-expanded="false" aria-controls="subsection_content_0 subsection_content_1 subsection_content_2">Open all</a>' );
 
             // insert the markup for the subsection-controls
-            $element.find('.subsection__title')
-                .wrapInner( '<a class="subsection__link" href="#"></a>' );
+            $element.find('.subsection__title').each(function(index) {
+                $( this ).wrapInner( '<a class="subsection__link" aria-expanded="false" aria-controls="subsection_content_' + index +'" href="#"></a>' );
+            });
 
             // hide the content
             $element.find('.subsection__content')
@@ -28,12 +29,14 @@
             $element.find('.subsection__header').on('click', function(e) {
                 toggleSection($(this).next());
                 toggleIcon($(this));
+                toggleState($(this).find('.subsection__link'));
                 return false;
             });
 
             $element.find('.subsection__link').on('click', function(e) {
                 toggleSection($(this).parent().parent().next());
                 toggleIcon($(this).parent().parent());
+                toggleState($(this));
                 return false;
             });
 
@@ -53,6 +56,14 @@
                 }
             }
 
+            function toggleState($node) {
+                if ($($node).attr('aria-expanded') == "true") {
+                    $node.attr("aria-expanded", "false");
+                } else {
+                    $node.attr("aria-expanded", "true");
+                }
+            }
+
             function openSection($node) {
                 $node.removeClass('js-hide');
             }
@@ -69,18 +80,35 @@
                 $node.removeClass('is-open');
             }
 
+            function setExpandedState($node, state) {
+                $node.attr("aria-expanded", state);
+            }
 
             // add the toggle functionality all sections
             $element.find('.js-open-close').on('click', function(e) {
                 var action = '';
+
+                // update button
                 if ($(this).text() == "Open all") {
                     $(this).text("Close all");
+                    $(this).attr("aria-expanded", "true");
                     action = 'open';
                 } else {
                     $(this).text("Open all");
+                    $(this).attr("aria-expanded", "false");
                     action = 'close';
                 }
 
+                // set aria-expanded on links
+                $('.subsection__link').each(function( index ) {
+                    if (action == 'open') {
+                        setExpandedState($(this), "true");
+                    } else {
+                        setExpandedState($(this), "false");
+                    }
+                });
+
+                // show/hide content
                 $('.subsection__header').each(function( index ) {
                     if (action == 'open') {
                         openSection($(this).next());
@@ -94,6 +122,5 @@
                 return false;
             });
         }
-
     };
 })(window.GOVUK.Modules);
