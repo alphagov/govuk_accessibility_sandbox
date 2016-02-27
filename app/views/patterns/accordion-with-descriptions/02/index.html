@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Accordion with descriptions - Test Case 2
+{% endblock %}
+
+{% block content %}
+<main class="accordion-with-descriptions-02" id="content" role="main">
+
+  {% include "includes/breadcrumb_examples.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Accordion with descriptions - Test Case 2
+      </h1>
+
+      <h2 class="heading-medium">Test Case - Using a button inside the heading</h2>
+
+      <div class="test-case">
+        <div class="subsections" data-module="service-manual-disclosure">
+
+          <div class="subsection-controls">
+
+          </div>
+          <div class="subsection-wrapper">
+
+            <div class="subsection">
+              <div class="subsection__header">
+                <h2 class="subsection__title">
+                  This is the heading for subsection 1
+                </h2>
+                <p class="subsection__description">
+                  This is the description for subsection 1
+                </p>
+              </div>
+
+              <div class="subsection__content" id="subsection_content_0">
+                <ul class="subsection__items">
+                  <li><a href="#">Subsection 1 - link 1</a></li>
+                  <li><a href="#">Subsection 1 - link 2</a></li>
+                  <li><a href="#">Subsection 1 - link 3</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection__header">
+                <h2 class="subsection__title">
+                  This is the heading for subsection 2
+                </h2>
+                <p class="subsection__description">
+                  This is the description for subsection 2
+                </p>
+              </div>
+
+              <div class="subsection__content" id="subsection_content_1">
+                <ul class="subsection__items">
+                  <li><a href="#">Subsection 2 - link 1</a></li>
+                  <li><a href="#">Subsection 2 - link 2</a></li>
+                  <li><a href="#">Subsection 2 - link 3</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="subsection__header">
+                <h2 class="subsection__title">
+                  This is the heading for subsection 3
+                </h2>
+                <p class="subsection__description">
+                  This is the description for subsection 3
+                </p>
+              </div>
+
+              <div class="subsection__content" id="subsection_content_2">
+                <ul class="subsection__items">
+                  <li><a href="#">Subsection 3 - link 1</a></li>
+                  <li><a href="#">Subsection 3 - link 2</a></li>
+                  <li><a href="#">Subsection 3 - link 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      </div>
+
+      <h2 class="heading-medium">Implementation details</h2>
+      <p>insert description</p>
+
+      <h2 class="heading-medium">Results<h2>
+
+        <h3 class="heading-small">Colour blindness</h3>
+
+        <h3 class="heading-small">Colour contrast</h3>
+
+        <h3 class="heading-small">Inverted Colours</h3>
+
+        <h3 class="heading-small">Increased font size</h3>
+
+        <h3 class="heading-small">Hit area</h3>
+
+        <h3 class="heading-small">Keyboard only (chrome)</h3>
+
+        <h3 class="heading-small">Screen readers</h3>
+
+        <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+
+        <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+
+        <h4 class="heading-xsmall">NVDA / Firefox</h4>
+
+        <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+
+        <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+
+        <h3 class="heading-small">Screen Magnifier (Dragon)</h3>
+
+        <h3 class="heading-small">Speech Recognition (ZoomText)</h3>
+
+        <h3 class="heading-small">Valid markup</h3>
+
+        <h3 class="heading-small">Progressive Enhancement</h3>
+
+        <h4 class="heading-xsmall">No Javascript</h4>
+
+        <h4 class="heading-xsmall">No Javascript and No CSS (Lynx)</h4>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/govuk/modules.js"></script>
+<script src="/public/javascripts/modules/accordion-with-descriptions-02.js"></script>
+<script src="/public/javascripts/govuk/start-modules.js"></script>
+{% endblock %}
