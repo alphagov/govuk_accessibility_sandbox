@@ -43,6 +43,10 @@
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+main {
+  outline: none;
+}
+
 .heading-xsmall {
   @include bold-16();
 }
