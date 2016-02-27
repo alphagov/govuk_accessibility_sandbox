@@ -9,13 +9,15 @@ A place to build and test accessible components.
 * [NPM]
 
 ## Installation
-```
-npm install
+
+```sh
+$ npm install
 ```
 
 ## Usage
-```
-npm start
+
+```sh
+$ npm start
 ```
 
 Go to [localhost:3000](http://localhost:3000) in your browser.
