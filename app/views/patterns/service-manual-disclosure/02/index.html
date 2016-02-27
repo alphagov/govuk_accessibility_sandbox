@@ -19,24 +19,22 @@ Demo 2 - Service Manual - disclosure widget
       <div class="subsections" data-module="service-manual-disclosure">
 
         <div class="subsection-controls">
-          <button class="js-open-close if-no-js-hide"></button>
-        </div>
 
+        </div>
         <div class="subsection-wrapper">
 
           <div class="subsection">
-            <div class="js-toggle-disclosure">
-              <h2 class="subsection-title">
+            <div class="subsection__header">
+              <h2 class="subsection__title">
                 This is the heading for subsection 1
               </h2>
-              <p class="subsection-description">
+              <p class="subsection__description">
                 This is the description for subsection 1
               </p>
-              <span class="subsection-icon if-no-js-hide" aria-hidden="true"></span>
             </div>
 
-            <div class="js-toggle-disclosure-target if-js-hide">
-              <ul class="subsection-items">
+            <div class="subsection__content" id="subsection_content_0">
+              <ul class="subsection__items">
                 <li><a href="#">Subsection 1 - link 1</a></li>
                 <li><a href="#">Subsection 1 - link 2</a></li>
                 <li><a href="#">Subsection 1 - link 3</a></li>
@@ -45,18 +43,17 @@ Demo 2 - Service Manual - disclosure widget
           </div>
 
           <div class="subsection">
-            <div class="js-toggle-disclosure">
-                <h2 class="subsection-title">
-                  This is the heading for subsection 2
-                </h2>
-                <p class="subsection-description">
-                  This is the description for subsection 2
-                </p>
-                <span class="subsection-icon if-no-js-hide" aria-hidden="true"></span>
+            <div class="subsection__header">
+              <h2 class="subsection__title">
+                This is the heading for subsection 2
+              </h2>
+              <p class="subsection__description">
+                This is the description for subsection 2
+              </p>
             </div>
 
-            <div class="js-toggle-disclosure-target if-js-hide">
-              <ul class="subsection-items">
+            <div class="subsection__content" id="subsection_content_1">
+              <ul class="subsection__items">
                 <li><a href="#">Subsection 2 - link 1</a></li>
                 <li><a href="#">Subsection 2 - link 2</a></li>
                 <li><a href="#">Subsection 2 - link 3</a></li>
@@ -65,18 +62,17 @@ Demo 2 - Service Manual - disclosure widget
           </div>
 
           <div class="subsection">
-            <div class="js-toggle-disclosure">
-              <h2 class="subsection-title">
+            <div class="subsection__header">
+              <h2 class="subsection__title">
                 This is the heading for subsection 3
               </h2>
-              <p class="subsection-description">
+              <p class="subsection__description">
                 This is the description for subsection 3
               </p>
-              <span class="subsection-icon if-no-js-hide" aria-hidden="true"></span>
             </div>
 
-            <div class="js-toggle-disclosure-target if-js-hide">
-              <ul class="subsection-items">
+            <div class="subsection__content" id="subsection_content_2">
+              <ul class="subsection__items">
                 <li><a href="#">Subsection 3 - link 1</a></li>
                 <li><a href="#">Subsection 3 - link 2</a></li>
                 <li><a href="#">Subsection 3 - link 3</a></li>
@@ -94,8 +90,8 @@ Demo 2 - Service Manual - disclosure widget
 {% endblock %}
 
 {% block body_end %}
-  <script src="/public/javascripts/jquery-1.11.3.js"></script>
-  <script src="/public/javascripts/govuk/modules.js"></script>
-  <script src="/public/javascripts/modules/service-manual-disclosure-02.js"></script>
-  <script src="/public/javascripts/govuk/start-modules.js"></script>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/govuk/modules.js"></script>
+<script src="/public/javascripts/modules/service-manual-disclosure-02.js"></script>
+<script src="/public/javascripts/govuk/start-modules.js"></script>
 {% endblock %}

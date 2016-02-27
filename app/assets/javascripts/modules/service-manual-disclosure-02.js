@@ -1,177 +1,126 @@
 (function(Modules) {
-  "use strict";
+    "use strict";
 
-  Modules.ServiceManualDisclosure = function() {
+    Modules.ServiceManualDisclosure = function() {
 
-    this.start = function($element) {
+        this.start = function($element) {
 
-      // Get all disclosure sections
-      var $disclosure = $element.find('.js-toggle-disclosure');
+            // indicate that js has worked
+            $('.subsections').addClass('js');
 
-      // Set all subsections to be closed initially
-      var $subsections = $disclosure.parent('.subsection');
-      $subsections.addClass('is-closed');
+            // insert the markup for the subsection-controls
+            $element.find('.subsection-controls')
+                .append( '<button class="js-open-close" aria-expanded="false" aria-controls="subsection_content_0 subsection_content_1 subsection_content_2">Open all</button>' );
 
-      // Get the disclosure targets
-      var $targets = $element.find('.js-toggle-disclosure-target');
-      $targets.attr('aria-hidden', 'true');
+            // insert the markup for the subsection-controls
+            $element.find('.subsection__title').each(function(index) {
+                $( this ).wrapInner( '<button class="subsection__link" aria-expanded="false" aria-controls="subsection_content_' + index +'"></a>' );
+            });
 
-      // The accordion panel uses the role tabpanel
-      $targets.attr('role', 'tabpanel');
+            // hide the content
+            $element.find('.subsection__content')
+                .addClass( 'js-hide' );
 
-      // Add an ID to each one
-      $targets.each(function(index) {
-        var i = index + 1;
-        $(this).attr("id", "subsection-" + i);
-        // The accordion panel should have an aria-labelledby relationship, referencing the corresponding header
-        $(this).attr("aria-labelledby", "subsection-header" + i);
-      });
+            // insert the subsection icon
+            $element.find('.subsection__header')
+                .append( '<span class="subsection__icon"></span>' );
 
-      // Get all of the headings
-      var $headings = $element.find('.js-toggle-disclosure .subsection-title');
+            // add the toggle functionality individual sections
+            $element.find('.subsection__header').on('click', function(e) {
+                toggleSection($(this).next());
+                toggleIcon($(this));
+                toggleState($(this).find('.subsection__link'));
+                return false;
+            });
 
-      // Set the aria controls attribute for each one
-      $headings.each(function(index) {
-        var i = index + 1;
+            $element.find('.subsection__link').on('click', function(e) {
+                toggleSection($(this).parent().parent().next());
+                toggleIcon($(this).parent().parent());
+                toggleState($(this));
+                return false;
+            });
 
-        // The accordion panel should have an aria-labelledby relationship, referencing the corresponding header, having a role of tab
-        $(this).attr("id", "subsection-header" + i);
-        $(this).attr("aria-controls", "subsection-" + i);
-        $(this).attr("role", "tab");
-        // Ensure it is possible to tab to each heading
-        $(this).attr("tabindex", "0");
-      });
+            function toggleSection($node) {
+                if ($($node).hasClass('js-hide')) {
+                    openSection($node);
+                } else {
+                    closeSection($node);
+                }
+            }
 
-      // Get the open/close all button
-      var $openOrCloseAll = $element.find('.js-open-close');
+            function toggleIcon($node) {
+                if ($($node).hasClass('is-open')) {
+                    $node.removeClass('is-open');
+                } else {
+                    $node.addClass('is-open');
+                }
+            }
 
-      // Since all sections are initially closed, set the button text to "Open all"
-      var openOrCloseText = $openOrCloseAll.text('Open all');
+            function toggleState($node) {
+                if ($($node).attr('aria-expanded') == "true") {
+                    $node.attr("aria-expanded", "false");
+                } else {
+                    $node.attr("aria-expanded", "true");
+                }
+            }
 
-      // Open all
-      function openAll() {
-        $headings.each(function() {
-          var $heading = $(this);
-          var target = $heading.attr('aria-controls');
-          var $target = $('#' + target);
-          var $subsection = $heading.closest('.subsection');
+            function openSection($node) {
+                $node.removeClass('js-hide');
+            }
 
-          $target.removeAttr('class','if-js-hide');
-          $target.attr('aria-hidden', 'false');
+            function closeSection($node) {
+                $node.addClass('js-hide');
+            }
 
-          $heading.attr('aria-expanded', 'true');
+            function showOpenIcon($node) {
+                $node.addClass('is-open');
+            }
 
-          $subsection.removeClass('is-closed');
-          $subsection.addClass('is-open');
-        });
-      }
+            function showCloseIcon($node) {
+                $node.removeClass('is-open');
+            }
 
-      // Close all
-      function closeAll() {
-        $headings.each(function() {
-          var $heading = $(this);
-          var target = $heading.attr('aria-controls');
-          var $target = $('#' + target);
-          var $subsection = $heading.closest('.subsection');
+            function setExpandedState($node, state) {
+                $node.attr("aria-expanded", state);
+            }
 
-          $target.attr('class','if-js-hide');
-          $target.attr('aria-hidden', 'true');
+            // add the toggle functionality all sections
+            $element.find('.js-open-close').on('click', function(e) {
+                var action = '';
 
-          $heading.attr('aria-expanded', 'false');
+                // update button
+                if ($(this).text() == "Open all") {
+                    $(this).text("Close all");
+                    $(this).attr("aria-expanded", "true");
+                    action = 'open';
+                } else {
+                    $(this).text("Open all");
+                    $(this).attr("aria-expanded", "false");
+                    action = 'close';
+                }
 
-          $subsection.removeClass('is-open');
-          $subsection.addClass('is-closed');
-        });
-      }
+                // set aria-expanded on links
+                $('.subsection__link').each(function( index ) {
+                    if (action == 'open') {
+                        setExpandedState($(this), "true");
+                    } else {
+                        setExpandedState($(this), "false");
+                    }
+                });
 
-      // Find out the state of open or closed
-      $openOrCloseAll.on('click', openOrCloseAll);
+                // show/hide content
+                $('.subsection__header').each(function( index ) {
+                    if (action == 'open') {
+                        openSection($(this).next());
+                        showOpenIcon($(this));
+                    } else {
+                        closeSection($(this).next());
+                        showCloseIcon($(this));
+                    }
+                });
 
-      function openOrCloseAll() {
-
-        var openOrCloseText = $openOrCloseAll.text();
-
-        if (openOrCloseText == "Open all") {
-          openAll();
-          openOrCloseText = "Close all";
-          $openOrCloseAll.text(openOrCloseText);
+                return false;
+            });
         }
-        else {
-          closeAll();
-          openOrCloseText = "Open all";
-          $openOrCloseAll.text(openOrCloseText);
-        }
-
-        // Set focus back to the button
-        $openOrCloseAll.focus();
-
-      }
-
-      // For each of the disclosure buttons
-      $headings.each(function() {
-
-        // Save the heading
-        var $heading = $(this);
-
-        // Save the heading target
-        var target = $heading.attr('aria-controls');
-        var $target = $('#' + target);
-
-        var $subsection = $heading.closest('.subsection');
-
-        // On enter, click or space - toggle
-        $heading.on('keyup click', function(e){
-          if (e.which === 13 || e.which === 32 || e.type === 'click') {
-            toggle();
-          }
-        });
-
-        function toggle() {
-          var headingState = $heading.attr('aria-expanded');
-          var targetState = $target.attr('aria-hidden');
-          // console.log("Initial state: button aria-expanded="+buttonState+" target aria-hidden="+targetState);
-          $target.toggleClass('if-js-hide');
-          setAriaAttr();
-          setSubsectionState();
-          setOpenOrCloseAll();
-        }
-
-        function setAriaAttr() {
-          if ($target.attr("aria-hidden") == "true") {
-            $target.attr("aria-hidden", "false");
-            $heading.attr("aria-expanded", "true");
-          }
-          else {
-            $target.attr("aria-hidden", "true");
-            $heading.attr("aria-expanded", "false");
-          }
-        }
-
-        // Set the open or closed state
-        function setSubsectionState() {
-          if ($target.attr("aria-hidden") == "true") {
-            $subsection.removeClass('is-open');
-            $subsection.addClass('is-closed');
-          }
-          else {
-            $subsection.removeClass('is-closed');
-            $subsection.addClass('is-open');
-          }
-        }
-
-        // Change the open or close all text
-        function setOpenOrCloseAll() {
-          if ($target.attr("aria-hidden") == "true") {
-            var openOrCloseText = $openOrCloseAll.text("Open all");
-          }
-          else {
-            var openOrCloseText = $openOrCloseAll.text("Close all");
-          }
-        }
-
-      });
-
-    }
-
-  };
+    };
 })(window.GOVUK.Modules);
