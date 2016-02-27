@@ -12,7 +12,7 @@
   display: block !important;
 }
 
-.service-manual-disclosure-01 {
+.accordion-with-descriptions-01 {
 
   // Open/Close all button
   .subsection-controls {
@@ -87,9 +87,9 @@
 
     // https://css-tricks.com/a-complete-guide-to-svg-fallbacks/
     // PNG fallback for SVG
-    background-image: url('/public/images/service-manual-disclosure/icons.png');
+    background-image: url('/public/images/accordion-with-descriptions/icons.png');
     // SVG sprite
-    background: url("/public/images/service-manual-disclosure/icons.svg"), linear-gradient(transparent, transparent);
+    background: url("/public/images/accordion-with-descriptions/icons.svg"), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
 
     display: none;
@@ -119,49 +119,47 @@
 }
 
 // This will sit in government frontend, hence reverting BEM syntax in Demo 2
-.service-manual-disclosure-02 {
-
+.accordion-with-descriptions-02 {
   // Make open and close buttons look like links
   .subsection-controls {
     @extend %contain-floats;
+    min-height: 35px;
+
+    button.js-open-close {
+      float: right;
+
+      @include core-16;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: $link-colour;
+      padding: 0.5em 0;
+    }
   }
-
-  .subsection-controls button {
-    float: right;
-
-    @include core-16;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: $link-colour;
-    text-decoration: underline;
-
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-  }
-
-  // Subsections
 
   .subsection-wrapper {
-    border-top: 1px solid $border-colour;
-  }
-
-  .subsection {
-    width: 100%;
-    position: relative;
     border-bottom: 1px solid $border-colour;
   }
 
-  .subsection-button {
-    display: block;
-    width: 100%;
-    text-align: left;
-    border: 0;
-    background: #FFF;
-    padding: 1em 0;
-    &:hover {
+  .subsection__header {
+    padding: 0.6em 0;
+    border-top: 1px solid $border-colour;
+    position: relative;
+  }
+
+
+  .subsection__title {
+    @include bold-19;
+    padding-top: 0;
+
+    button {
+      @include bold-19;
+      color: $govuk-blue;
+      background: none;
       cursor: pointer;
-      background: $highlight-colour;
+      background: none;
+      border: none;
+      padding: 0;
     }
   }
 
@@ -178,58 +176,68 @@
     outline: 3px solid $focus-colour;
   }
 
-  .subsection-description {
+
+  .subsection__description {
     display: block;
     @include core-16;
     color: $secondary-text-colour;
+    margin-bottom: 0;
   }
 
+  .subsection__items {
+    padding-bottom: 0.5em;
+  }
 
-  .subsection-icon {
+  .subsection__items li {
+    margin-bottom: 0.25em;
+  }
+
+  .subsection__items li a {
+    text-decoration: none;
+  }
+
+  // javascript inserted markup
+  .subsection__link {
+    text-decoration: none;
+    color: $govuk-blue;
+  }
+
+  .js-hide {
+    display: none;
+  }
+
+  .subsection__icon {
     position: absolute;
     right: 15px;
     top: 15px;
 
-    height: 16px;
+    height: 15px;
     width: 16px;
 
     // https://css-tricks.com/a-complete-guide-to-svg-fallbacks/
-    // PNG fallback for SVG (does this work in IE7?)
-    background-image: url('/public/images/service-manual-disclosure/icons.png');
+    // PNG fallback for SVG
+    background-image: url('/public/images/accordion-with-descriptions/icons.png');
     // SVG sprite
-    background: url("/public/images/service-manual-disclosure/icons.svg"), linear-gradient(transparent, transparent);
+    background: url("/public/images/accordion-with-descriptions/icons.svg"), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
-
-    display: none;
-
-  }
-
-  .js-enabled .subsection-icon {
-    display: block;
-  }
-
-  .is-open .subsection-icon {
-    background-position: 0 0;
-  }
-
-  .is-closed .subsection-icon {
     background-position: 0 -16px;
   }
 
-  .subsection-items {
-    padding-bottom: 0.5em;
+  .is-open .subsection__icon {
+    background-position: 0 0;
   }
 
-  .subsection-items li {
-    margin-bottom: 0.25em;
+
+  .js .subsection__header {
+    &:hover {
+      cursor: pointer;
+      background: $highlight-colour;
+    }
   }
 
-  .subsection-items li a {
-    text-decoration: none;
-  }
 }
 
-.service-manual-disclosure-03 {
+.accordion-with-descriptions-03 {
   // Make open and close buttons look like links
   .subsection-controls {
     @extend %contain-floats;
@@ -300,9 +308,9 @@
 
     // https://css-tricks.com/a-complete-guide-to-svg-fallbacks/
     // PNG fallback for SVG
-    background-image: url('/public/images/service-manual-disclosure/icons.png');
+    background-image: url('/public/images/accordion-with-descriptions/icons.png');
     // SVG sprite
-    background: url("/public/images/service-manual-disclosure/icons.svg"), linear-gradient(transparent, transparent);
+    background: url("/public/images/accordion-with-descriptions/icons.svg"), linear-gradient(transparent, transparent);
     background-repeat: no-repeat;
     background-position: 0 -16px;
   }

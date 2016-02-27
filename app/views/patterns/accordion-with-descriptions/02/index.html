@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-Demo 2 - Service Manual - disclosure widget
+Accordion with descriptions - Test Case 2
 {% endblock %}
 
 {% block content %}
-<main class="service-manual-disclosure-02" id="content" role="main">
+<main class="accordion-with-descriptions-02" id="content" role="main">
 
   {% include "includes/breadcrumb_examples.html" %}
 
@@ -13,10 +13,13 @@ Demo 2 - Service Manual - disclosure widget
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
-        Demo 2 - Service Manual - disclosure widget
+        Accordion with descriptions - Test Case 2
       </h1>
 
-      <div class="subsections" data-module="service-manual-disclosure">
+      <h2 class="heading-medium">Test Case - Using a button inside the heading</h2>
+
+      <div class="test-case">
+        <div class="subsections" data-module="service-manual-disclosure">
 
         <div class="subsection-controls">
 
@@ -82,6 +85,7 @@ Demo 2 - Service Manual - disclosure widget
         </div>
 
       </div>
+      </div>
 
     </div>
   </div>
@@ -92,6 +96,6 @@ Demo 2 - Service Manual - disclosure widget
 {% block body_end %}
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
 <script src="/public/javascripts/govuk/modules.js"></script>
-<script src="/public/javascripts/modules/service-manual-disclosure-02.js"></script>
+<script src="/public/javascripts/modules/accordion-with-descriptions-02.js"></script>
 <script src="/public/javascripts/govuk/start-modules.js"></script>
 {% endblock %}
