@@ -1,0 +1,36 @@
+.disclosure-control {
+  @include core-19();
+  color: $govuk-blue;
+  background: none;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  padding-left: 20px;
+  position: relative;
+}
+
+.disclosure-control__icon {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url('/public/images/disclosure/icon-closed.png') no-repeat;
+  position: absolute;
+  left: 0;
+  top: 4px;
+
+  .disclosure-control[aria-expanded="true"] & {
+    background: url('/public/images/disclosure/icon-open.png') no-repeat;
+  }
+}
+
+
+.js-enabled {
+  div[aria-hidden="true"] {
+      display: none;
+  }
+
+  div[aria-hidden="false"] {
+      display: block;
+  }
+}

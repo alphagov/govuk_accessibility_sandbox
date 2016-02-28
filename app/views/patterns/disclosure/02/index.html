@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-Demo 2 - Disclosure
+Disclosure - Test Case 2
 {% endblock %}
 
 {% block content %}
@@ -9,39 +9,99 @@ Demo 2 - Disclosure
 
     {% include "includes/breadcrumb_examples.html" %}
 
-    <div class="grid-row">
-        <div class="column-two-thirds">
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-                <h1 class="heading-xlarge">
-                    Demo 2 - Disclosure
-                </h1>
+      <h1 class="heading-xlarge">
+        Disclosure - Test Case 2
+      </h1>
 
-                <h2 class="heading-medium">Implementation</h2>
+      <h2 class="heading-medium">Test Case - Button element</h2>
 
-                <div class="example">
-<button id="button" aria-expanded="false" aria-controls="content">Help with nationality <span id="icon" aria-hidden="true></span></button>
+      <div class="test-case">
+        <button class="disclosure-control" aria-expanded="false" aria-controls="disclosure-content-1">
+          <span class="disclosure-control__icon"></span>
+          Help with nationality
+        </button>
 
-<div id="content" aria-hidden="true">
+        <div class="disclosure-content" id="disclosure-content-1" aria-hidden="true">
 
-    <div class="panel panel-border-narrow">
-        <p>If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
-      </p>
+          <div class="panel panel-border-narrow">
+            <p>If you're not sure about your nationality, try to find out from an official document like a passport or national ID card.
+            </p>
 
-      <p>
-        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have
-to send copies of identity documents through the post.
-      </p>
-
-    </div>
-
-                </div>
-
-                <h2 class="heading-medium">Results</h2>
-                <p>The component is yet to be tested...</p>
-
-            </form>
+            <p>
+              We need to know your nationality so we can work out which elections you're entitled to vote in.
+              If you can't provide your nationality, you'll have to send copies of identity documents through the post.
+            </p>
+          </div>
 
         </div>
+
+      </div>
+
+      <h2 class="heading-medium">Implementation details</h2>
+      <p>This implementation use a <code>button</code> element as the control for the widget. </p>
+
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen Magnifier (Dragon)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Speech Recognition (ZoomText)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">No Javascript and No CSS (Lynx)</h4>
+      <p>Awating result</p>
     </div>
+  </div>
 </main>
+{% endblock %}
+
+{% block body_end %}
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/disclosure-02.js"></script>
 {% endblock %}
