@@ -1,7 +1,7 @@
 (function(Modules) {
   "use strict";
 
-  Modules.ServiceManualDisclosure = function() {
+  Modules.AccordionWithDescriptions = function() {
 
     this.start = function($element) {
 
