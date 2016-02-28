@@ -15,18 +15,18 @@ router.get('/examples/template-data', function (req, res) {
 
 // add your routes here
 
-var renderCountrySelectorPage = function(params, callback){
+var renderAutocompletePage = function(params, callback){
 
   // Load register from JSON file
 
   var data = {};
-  data.countries = JSON.parse(fs.readFileSync('app/views/patterns/country-selector/data/country-records.json', 'utf8'));
+  data.countries = JSON.parse(fs.readFileSync('app/views/patterns/autocomplete/data/country-records.json', 'utf8'));
 
 
   // Load additional country data from JSON file
 
   var extension = {};
-  extension = JSON.parse(fs.readFileSync('app/views/patterns/country-selector/data/country-records-extension.json', 'utf8'));
+  extension = JSON.parse(fs.readFileSync('app/views/patterns/autocomplete/data/country-records-extension.json', 'utf8'));
 
 
   // Merge the additional data into the register data
@@ -59,11 +59,11 @@ var renderCountrySelectorPage = function(params, callback){
 
 }
 
-router.get("/patterns/country-selector/01/", function (req, res, next) {
+router.get("/patterns/autocomplete/01/", function (req, res, next) {
   var params = {};
 
-  renderCountrySelectorPage(params, function(error, data){
-    return res.render('patterns/country-selector/01/index', data);
+  renderAutocompletePage(params, function(error, data){
+    return res.render('patterns/autocomplete/01/index', data);
   })
 
 });

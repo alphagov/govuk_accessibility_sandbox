@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Autocomplete
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">Autocomplete</h1>
+
+      <h2 class="heading-medium">What is it?</h2>
+
+      <p>
+        The pattern is a list of suggestions based on what a user has already input. A user can navigate through the
+        suggestions and selecting one adds the text in the input. Autocomplete can speed up the input of data and ensure
+        the correct spelling is submitted. A common usage is for providing a country name.
+      </p>
+
+      <div class="screenshot">
+        <img src="/public/images/autocomplete/screenshot.png" width="588" height="235" alt="Screen shot of autocomplete" />
+      </div>
+
+
+      <h2 class="heading-medium">Accessibility success criteria</h2>
+      <p>to do</p>
+
+      <h2 class="heading-medium">Test Cases</h2>
+
+      <ul class="list list-bullet">
+        <li><a href="/patterns/autocomplete/01/">1 - Baymard auto-complete</a></li>
+      </ul>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
