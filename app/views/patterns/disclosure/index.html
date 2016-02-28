@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Disclosure
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+    {% include "includes/breadcrumb_examples.html" %}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                Disclosure
+            </h1>
+
+            <h2 class="heading-medium">What is it?</h2>
+
+            <p>The pattern for disclosing content is to have a control that toggles the display of additional information.</p>
+
+            <div class="screenshot">
+                <img src="/public/images/disclosure/screenshot.png" width="495" height="225" alt="Screen shot of accordion" />
+            </div>
+
+            <h2 class="heading-medium">Accessibility success criteria</h2>
+
+            <ul class="list list-bullet">
+                <li>It must be possible to focus on the disclosure control using the tab key.</li>
+                <li>The disclosure control must change in appearance when keyboard focus moves to it.</li>
+                <li>It must be possible to activate the disclosure control using the appropriate keys (for a <code>button</code> this is the space and enter keys).</li>
+                <li>The disclosure control must change in appearance when the mouse is hovered over it.</li>
+                <li>It must be possible to activate the disclosure control using a click.</li>
+                <li>The disclosure control must be large enough to tap accurately with one finger.</li>
+                <li>The disclosure control must change in appearance to indicate the touch-down state.</li>
+                <li>It must be possible to activate the disclosure control using standard button voice commands.</li>
+                <li>The expanded/collapsed state of the disclosure widget must be available in the code.</li>
+                <li>The relationship between the disclosure control and disclosed content must be available in the code.</li>
+                <li>It must be possible to focus on the disclosure control using standard screen reader button commands.</li>
+                <li>The disclosure control must have a visible text label.</li>
+                <li>The disclosure control text label must use a default font size that makes reading comfortable.</li>
+                <li>The contrast between the disclosure control text label and its background must meet (or exceed) a ratio of 4.5:1.</li>
+                <li>The disclosure control must change appearance when it is expanded/collapsed.</li>
+                <li>The markup must validate</li>
+                <li>The content must be available without javascript</li>
+                <li>The content must be in a logical order in the source code</li>
+            </ul>
+
+          <h2 class="heading-medium">Test Cases</h2>
+            <ul class="list list-bullet">
+              <li><a href="01/">1 - Details and summary elements and polyfill</a></li>
+              <li><a href="02/">2 - Button element</a></li>
+              <li><a href="03/">3 - Anchor element</a></li>
+            </ul>
+
+            <h2 class="heading-medium">Further reading</h2>
+            <ul>
+                <li><a href="https://designpatterns.hackpad.com/Progressive-disclosure-mi03xhbZQpu">Design pattern: Progressive disclosure</a></li>
+            </ul>
+
+        </div>
+    </div>
+</main>
+{% endblock %}
