@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Country selector - Test Case 1
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_autocomplete.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Autocomplete - Test Case 1
+      </h1>
+
+      <h2 class="heading-medium">Test Case - Baymard auto-complete</h2>
+
+
+      <div class="test-case">
+
+        <form class="form">
+
+          <div class="form-group ui-front">
+            <label for="#country-selector" class="form-label">Country of birth</label>
+            <select name="country" class="form-control form-control-2-3" id="country-selector" autofocus="autofocus" autocorrect="off" autocomplete="off">
+              <option value="" selected="selected">Select Country</option>
+              {% for country in countries %}
+              {% set aliases = country.entry.aliases -%}
+              {% set weighting = country.entry.weighting -%}
+              <option
+                value="{{ country.entry.name }}"
+                {% if aliases -%}
+                data-aliases="{% for alias in aliases %}{{ alias }} {% endfor %}"
+                {% endif -%}
+                {% if weighting -%}
+                data-weighting="{{ country.entry.weighting }}"
+                {% endif -%}
+              >{{ country.entry.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+        </form>
+
+      </div>
+
+      <h2 class="heading-medium">Implementation details</h2>
+
+      <p>Based on the <a href="http://baymard.com/labs/country-selector">Baymard Select-To-Autocomplete plugin</a>. Uses data from <a href="http://country.openregister.org">country.openregister.org</a>.</p>
+
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen Magnifier (Dragon)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Speech Recognition (ZoomText)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">No Javascript and No CSS (Lynx)</h4>
+      <p>Awating result</p>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block body_end %}
+{{ super() }}
+  <!-- Country selector -->
+  <script src="/public/patterns/autocomplete/01/jquery-ui.min.js"></script>
+  <script src="/public/patterns/autocomplete/01/jquery.select-to-autocomplete.js"></script>
+
+  <script>
+    (function($){
+      $(function(){
+        $('select').selectToAutocomplete();
+      });
+
+    })(jQuery);
+  </script>
+{% endblock %}
+
