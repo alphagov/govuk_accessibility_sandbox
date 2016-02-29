@@ -7,7 +7,12 @@ Disclosure - Test Case 1
 {% block content %}
 <main id="content" role="main" tabindex="-1">
 
-    {% include "includes/breadcrumb_examples.html" %}
+  {{ macro.breadcrumb([
+    {
+      url: "/patterns/disclosure/",
+      title: "Disclosure"
+    }]
+  )}}
 
   <div class="grid-row">
     <div class="column-two-thirds">

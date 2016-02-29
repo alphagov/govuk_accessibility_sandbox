@@ -1,0 +1,10 @@
+{% macro breadcrumb(items) %}
+<div class="breadcrumbs">
+  <ol>
+    <li><a href="/">Accessibility sandbox</a></li>
+    {% for item in items %}
+    <li><a href="{{item.url}}">{{item.title}}</a></li>
+    {% endfor %}
+  </ol>
+</div>
+{% endmacro %}

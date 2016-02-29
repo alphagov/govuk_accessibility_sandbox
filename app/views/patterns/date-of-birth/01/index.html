@@ -7,7 +7,12 @@ Date of birth - Test Case 1
 {% block content %}
 <main id="content" role="main" tabindex="-1">
 
-    {% include "includes/breadcrumb_examples.html" %}
+  {{ macro.breadcrumb([
+    {
+      url: "/patterns/date-of-birth/",
+      title: "Date of birth"
+    }]
+  )}}
 
     <div class="grid-row">
         <div class="column-two-thirds">
