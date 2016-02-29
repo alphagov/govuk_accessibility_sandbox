@@ -35,13 +35,15 @@
       // Get all of the headings
       var $headings = $element.find('.js-toggle-disclosure .subsection-title');
 
-      // Set the aria controls attribute for each one
       $headings.each(function(index) {
         var i = index + 1;
 
         // The accordion panel should have an aria-labelledby relationship, referencing the corresponding header, having a role of tab
         $(this).attr("id", "subsection-header" + i);
+        // Set the aria controls attribute for each one
         $(this).attr("aria-controls", "subsection-" + i);
+        // Set the aria-expanded attribute to false for each control
+        $(this).attr("aria-expanded", "false");
         $(this).attr("role", "tab");
         // Ensure it is possible to tab to each heading
         $(this).attr("tabindex", "0");
@@ -174,6 +176,9 @@
           }
           else {
             $target.attr("aria-selected", "true");
+            // When the corresponding panel is expanded (its aria-expanded state is 'true')
+            // then focus moves to the first focusable element in the panel.
+            $target.first().find('a:first').focus();
           }
         }
 
