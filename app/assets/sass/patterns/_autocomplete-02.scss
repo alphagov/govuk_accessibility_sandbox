@@ -1,0 +1,53 @@
+.added-country {
+  .form-control {
+    padding: 0.5em;
+  }
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  font-size: 19px;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0;
+  padding: 0.5em;
+}
+
+.tt-hint{
+  display: none;
+}
+
+.tt-dropdown-menu {
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.tt-suggestion {
+  padding: 0.5em;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.tt-suggestion p{
+  margin: 0;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.twitter-typeahead {
+  width: 100%;
+
+  .validation-wrapper .optional-section & input {
+    margin-bottom: 0;
+  }
+}
+
+.test-case {
+  overflow: visible
+}
