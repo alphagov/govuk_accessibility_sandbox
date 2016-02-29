@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Accordion with descriptions - Test Case 3
+{% endblock %}
+
+{% block content %}
+<main class="accordion-with-descriptions-04" id="content" role="main" tabindex="-1">
+
+  {% include "includes/breadcrumb_examples.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Accordion with descriptions - Test Case 4
+      </h1>
+
+      <h2 class="heading-medium">Test Case - Using tablist and tabpanel attributes</h2>
+
+      <div class="test-case">
+
+        <div class="subsections" data-module="accordion-with-descriptions">
+
+          <div class="subsection-controls">
+            <button class="js-open-close if-no-js-hide"></button>
+          </div>
+
+          <div class="subsection-wrapper js-accordion-wrapper">
+
+            <div class="subsection">
+              <div class="js-toggle-disclosure">
+                <h2 class="subsection-title">
+                  This is the heading for subsection 1
+                </h2>
+                <p class="subsection-description">
+                  This is the description for subsection 1
+                </p>
+                <span class="subsection-icon if-no-js-hide" aria-hidden="true"></span>
+              </div>
+
+              <div class="js-toggle-disclosure-target if-js-hide">
+                <ul class="subsection-items">
+                  <li><a href="#">Subsection 1 - link 1</a></li>
+                  <li><a href="#">Subsection 1 - link 2</a></li>
+                  <li><a href="#">Subsection 1 - link 3</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="js-toggle-disclosure">
+                  <h2 class="subsection-title">
+                    This is the heading for subsection 2
+                  </h2>
+                  <p class="subsection-description">
+                    This is the description for subsection 2
+                  </p>
+                  <span class="subsection-icon if-no-js-hide" aria-hidden="true"></span>
+              </div>
+
+              <div class="js-toggle-disclosure-target if-js-hide">
+                <ul class="subsection-items">
+                  <li><a href="#">Subsection 2 - link 1</a></li>
+                  <li><a href="#">Subsection 2 - link 2</a></li>
+                  <li><a href="#">Subsection 2 - link 3</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="subsection">
+              <div class="js-toggle-disclosure">
+                <h2 class="subsection-title">
+                  This is the heading for subsection 3
+                </h2>
+                <p class="subsection-description">
+                  This is the description for subsection 3
+                </p>
+                <span class="subsection-icon if-no-js-hide" aria-hidden="true"></span>
+              </div>
+
+              <div class="js-toggle-disclosure-target if-js-hide">
+                <ul class="subsection-items">
+                  <li><a href="#">Subsection 3 - link 1</a></li>
+                  <li><a href="#">Subsection 3 - link 2</a></li>
+                  <li><a href="#">Subsection 3 - link 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="heading-medium">Implementation details</h2>
+  <p>Create an accordion widget: https://www.w3.org/TR/wai-aria-practices/#accordion</p>
+
+  <h2 class="heading-medium">Results</h2>
+
+  <h3 class="heading-small">Colour blindness</h3>
+
+  <h3 class="heading-small">Colour contrast</h3>
+
+  <h3 class="heading-small">Inverted Colours</h3>
+
+  <h3 class="heading-small">Increased font size</h3>
+
+  <h3 class="heading-small">Hit area</h3>
+
+  <h3 class="heading-small">Keyboard only (chrome)</h3>
+
+  <h3 class="heading-small">Screen readers</h3>
+
+  <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+
+  <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+
+  <h4 class="heading-xsmall">NVDA / Firefox</h4>
+
+  <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+
+  <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+
+  <h3 class="heading-small">Screen Magnifier (Dragon)</h3>
+
+  <h3 class="heading-small">Speech Recognition (ZoomText)</h3>
+
+  <h3 class="heading-small">Valid markup</h3>
+
+  <h3 class="heading-small">Progressive Enhancement</h3>
+
+  <h4 class="heading-xsmall">No Javascript</h4>
+
+  <h4 class="heading-xsmall">No Javascript and No CSS (Lynx)</h4>
+
+</main>
+{% endblock %}
+
+{% block body_end %}
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/govuk/modules.js"></script>
+  <script src="/public/javascripts/modules/accordion-with-descriptions-04.js"></script>
+  <script src="/public/javascripts/govuk/start-modules.js"></script>
+{% endblock %}
