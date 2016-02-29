@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-Autocomplete - Test Case 1
+Autocomplete - Test Case 2
 {% endblock %}
 
 {% block content %}
@@ -18,43 +18,29 @@ Autocomplete - Test Case 1
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
-        Autocomplete - Test Case 1
+        Autocomplete - Test Case 2
       </h1>
 
-      <h2 class="heading-medium">Test Case - Baymard auto-complete</h2>
+      <h2 class="heading-medium">Test Case - Twitter typeahead</h2>
 
-
-      <div class="test-case">
-
-        <form class="form">
-
-          <div class="form-group ui-front">
-            <label for="#country-selector" class="form-label">Country of birth</label>
-            <select name="country" class="form-control form-control-2-3" id="country-selector" autofocus="autofocus" autocorrect="off" autocomplete="off">
-              <option value="" selected="selected">Select Country</option>
-              {% for country in countries %}
-              {% set aliases = country.entry.aliases -%}
-              {% set weighting = country.entry.weighting -%}
-              <option
-                value="{{ country.entry.name }}"
-                {% if aliases -%}
-                data-aliases="{% for alias in aliases %}{{ alias }} {% endfor %}"
-                {% endif -%}
-                {% if weighting -%}
-                data-weighting="{{ country.entry.weighting }}"
-                {% endif -%}
-              >{{ country.entry.name }}</option>
-              {% endfor %}
-            </select>
+      <div class="test-case" style="overflow: visible">
+        <div class="added-country">
+          <label for="country" class="country-label">Country name</label>
+          <div class="validation-wrapper">
+            <input type="text"
+                   id="country"
+                   name="country"
+                   value=""
+                   autocomplete="off"
+                   class="form-control country-autocomplete"
+                />
           </div>
-
-        </form>
-
+        </div>
       </div>
 
       <h2 class="heading-medium">Implementation details</h2>
 
-      <p>Based on the <a href="http://baymard.com/labs/country-selector">Baymard Select-To-Autocomplete plugin</a>. Uses data from <a href="http://country.openregister.org">country.openregister.org</a>.</p>
+      <p>Based on Twitter's <a href="https://twitter.github.io/typeahead.js/">typeahead.js</a>.</p>
 
       <h2 class="heading-medium">Results</h2>
 
@@ -117,16 +103,9 @@ Autocomplete - Test Case 1
 {% block body_end %}
 {{ super() }}
   <!-- Country selector -->
-  <script src="/public/javascripts/patterns/autocomplete/01/jquery-ui.min.js"></script>
-  <script src="/public/javascripts/patterns/autocomplete/01/jquery.select-to-autocomplete.js"></script>
-
-  <script>
-    (function($){
-      $(function(){
-        $('select').selectToAutocomplete();
-      });
-
-    })(jQuery);
-  </script>
+  <script src="/public/javascripts/patterns/autocomplete/02/typeahead.js"></script>
+  <script src="/public/javascripts/patterns/autocomplete/02/mustache.js"></script>
+  <script src="/public/javascripts/patterns/autocomplete/02/countries.js"></script>
+  <script src="/public/javascripts/patterns/autocomplete/02/autocomplete.js"></script>
+  <script src="/public/javascripts/patterns/autocomplete/02/init-autocomplete.js"></script>
 {% endblock %}
-
