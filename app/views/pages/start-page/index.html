@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Start page
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+  {{ macro.breadcrumb() }}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Start page
+      </h1>
+
+      <h2 class="heading-medium">What is it?</h2>
+
+      <p>Start pages are how people begin transactions on GOV.UK. All services on GOV.UK must have a start page.</p>
+
+      <p>Start pages consist of:</p>
+      <ol class="list list-number">
+        <li>the name of the service</li>
+        <li>a short introduction</li>
+        <li>a call to action button</li>
+        <li>additional information</li>
+      </ol>
+
+      <div class="screenshot">
+        <img src="/public/images/start-page/screenshot.png" width="616" height="432" alt="Screen shot of Start page"/>
+      </div>
+
+      <h2 class="heading-medium">Accessibility success criteria</h2>
+
+      <ul class="list list-bullet">
+        <li>insert</li>
+      </ul>
+
+      <h2 class="heading-medium">Test Cases</h2>
+      <ul class="list list-bullet">
+        <li><a href="01/">1 - Prototype kit</a></li>
+      </ul>
+
+      <h2 class="heading-medium">Further reading</h2>
+      <ul>
+        <li><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/start-pages.html">
+          Design pattern: Start pages</a></li>
+        <li><a href="https://designpatterns.hackpad.com/Start-pages-8fitVQYufJX">Hackpad: Start pages</a></li>
+      </ul>
+
+    </div>
+  </div>
+</main>
+{% endblock %}

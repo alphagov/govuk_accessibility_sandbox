@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {{ macro.breadcrumb([
+    {
+      url: "/pages/start-page/",
+      title: "Start page"
+    }]
+  )}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Applying for something
+      </h1>
+
+      <p>Use this service to:</p>
+
+      <ul class="list list-bullet">
+        <li>do something</li>
+        <li>update your name, address or other details</li>
+        <li>you need to do this in order to do something else</li>
+      </uL>
+
+      <p>Registering takes around 5 minutes.</p>
+
+      <p>
+        <a class="button button-start" href="#" role="button">Start now</a>
+      </p>
+
+      <h2 class="heading-medium">Before you start</h2>
+
+      <p>You can also <a href="#">register by post.</a></p>
+
+      <p>The online service is also available in <a href="#">Welsh (Cymraeg).</a></p>
+
+      <p>You can’t register for this service if you’re in the UK illegally.</p>
+
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Subsection</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="#">Related link</a></li>
+            <li><a href="#">Related link</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen Magnifier (ZoomText)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Speech Recognition (Dragon)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">No Javascript and No CSS (Lynx)</h4>
+      <p>Awating result</p>
+    </div>
+
+  </div>
+
+
+
+</main>
+
+{% endblock %}
