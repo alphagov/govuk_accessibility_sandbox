@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Question page - radio button - test case 1
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {{ macro.breadcrumb([
+    {
+      url: "/pages/question-date-of-birth/",
+      title: "Question page - radio buttons"
+    }]
+  )}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form class="form">
+
+        <h1 class="heading-large">
+          Check your personal details
+        </h1>
+
+        <p class="lede">
+          Look at your name, signature and other details.
+        </p>
+
+        <div class="form-group ">
+          <fieldset>
+
+            <legend>
+              <span class="form-label-bold">
+                Are your personal details correct and up-to-date?
+              </span>
+            </legend>
+
+            <label class="block-label" for="personal_details_yes">
+              <input id="personal_details_yes" type="radio" name="personal_details" value="Yes">
+              <span></span> Yes, my personal details are correct
+            </label>
+
+            <label class="block-label" for="personal_details_no">
+              <input id="personal_details_no" type="radio" name="personal_details" value="No">
+              <span></span> No, some details are wrong or have changed
+            </label>
+
+          </fieldset>
+        </div>
+
+        <input class="button" type="submit" value="Continue">
+      </form>
+
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen Magnifier (ZoomText)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Speech Recognition (Dragon)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">No Javascript and No CSS (Lynx)</h4>
+      <p>Awating result</p>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
