@@ -1,0 +1,693 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Elements interface inventory
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+  {{ macro.breadcrumb() }}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <form action="#">
+        <h1 class="heading-xlarge">Elements interface inventory</h1>
+
+        <p>Note: the heading structure is broken on this page</p>
+
+        <h2 class="heading-medium">Links and buttons</h2>
+
+        <h3 class="heading-small">Start now</h3>
+
+        <div class="example">
+          <a class="button button-start" href="#" role="button">Start now</a>
+        </div>
+
+        <h3 class="heading-small">Default button</h3>
+
+        <div class="example">
+          <input class="button" type="submit" value="Save and continue">
+        </div>
+
+        <h3 class="heading-small">Disabled default button</h3>
+
+        <div class="example">
+          <input class="button" type="submit" value="Save and continue" disabled="disabled">
+        </div>
+
+        <h3 class="heading-small">Links</h3>
+
+        <div class="example">
+          <p>
+            <a href="#">A 19px link without surrounding text</a>
+          </p>
+
+          <p>
+            <a href="#">A 19px body copy link</a>. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+          </p>
+
+          <p>
+            <a href="#" rel="external">A 19px body copy external link.</a> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+          </p>
+
+          <a href="#" class="link-back">Back</a>
+        </div>
+
+
+        <h2 class="heading-medium">Content</h2>
+
+        <h3 class="heading-small">Headings</h3>
+
+        <div class="example">
+          <h1 class="heading-xlarge">A 48px Bold heading</h1>
+
+          <h2 class="heading-large">A 36px Bold heading</h2>
+
+          <h3 class="heading-medium">A 24px Bold heading</h3>
+
+          <h4 class="heading-small">A 19px Bold heading</h4>
+        </div>
+
+        <h3 class="heading-small">Parapgraphs</h3>
+
+        <div class="example">
+          <p class="lede">
+            A 24px lead paragraph, maecenas sed diam eget risus varius blandit sit amet non magna.
+          </p>
+
+          <p>
+            A 19px body copy paragraph, maecenas sed diam eget risus varius blandit sit amet non magna.
+          </p>
+
+          <p class="font-xsmall">
+            A 16px supporting text paragraph, maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
+          </p>
+        </div>
+
+        <h3 class="heading-small">Lists</h3>
+
+        <div class="example">
+          <ul class="list list-bullet">
+            <li>here is a bulleted list</li>
+            <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+            <li>vestibulum id ligula porta felis euismod semper</li>
+            <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+          </ul>
+
+          <ol class="list list-number">
+            <li>here is a numbered list</li>
+            <li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</li>
+            <li>vestibulum id ligula porta felis euismod semper</li>
+            <li>integer posuere erat a ante venenatis dapibus posuere velit aliquet</li>
+          </ol>
+
+          <ul class="list">
+            <li><a href="#">Related link</a></li>
+            <li><a href="#">Related link</a></li>
+            <li><a href="#">Related link</a></li>
+            <li><a href="#" class="bold-xsmall">More</a></li>
+          </ul>
+        </div>
+
+        <h3 class="heading-small">Inset text</h3>
+
+        <div class="example">
+          <div class="panel panel-border-wide">
+            <p>
+              It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="heading-small">Legal text</h3>
+
+        <div class="example">
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              You can be fined up to £5,000 if you don’t register.
+            </strong>
+          </div>
+        </div>
+
+        <h3 class="heading-small">Hidden text</h3>
+
+        <div class="example">
+          <details>
+
+            <summary><span class="summary">Help with nationality</span></summary>
+
+            <div class="panel panel-border-narrow">
+
+              <p>
+                If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+              </p>
+
+              <p>
+                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.
+              </p>
+
+            </div>
+
+          </details>
+
+          <details open>
+
+            <summary><span class="summary">Where to find your driving licence number</span></summary>
+
+            <div class="panel panel-border-narrow">
+
+              <p>
+                Your driving licence number can be found in section 5
+                of your driving licence photocard.
+              </p>
+
+            </div>
+
+          </details>
+
+        </div>
+
+
+        <h3 class="heading-small">Higlight Box</h3>
+        <div class="example">
+          <div class="govuk-box-highlight">
+            <h2 class="bold-large">
+              Application complete
+            </h2>
+            <p>
+              Your reference number is <br>
+              <strong class="heading-medium">HDJ2123F</strong>
+            </p>
+          </div>
+        </div>
+
+        <h2 class="heading-medium">Data</h2>
+
+        <h3 class="heading-small">Numeric tabular data</h3>
+
+        <div class="example">
+          <table>
+            <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th class="numeric" scope="col">Paper form</th>
+              <th class="numeric" scope="col">Digital</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>25 November to 1 December 2013</td>
+              <td class="numeric">2,763</td>
+              <td class="numeric">1,792</td>
+            </tr>
+            <tr>
+              <td>2 to 8 December 2013</td>
+              <td class="numeric">2,850</td>
+              <td class="numeric">1,740</td>
+            </tr>
+            <tr>
+              <td>9 to 15 December 2013</td>
+              <td class="numeric">2,388</td>
+              <td class="numeric">1,683</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="heading-small">Data in a table</h3>
+        <div class="example">
+          <table>
+            <thead>
+            <tr>
+              <th colspan="2">Dates and amounts</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>First 6 weeks</td>
+              <td>£109.80 per week</td>
+            </tr>
+            <tr>
+              <td>Next 33 weeks</td>
+              <td>£109.80 per week</td>
+            </tr>
+            <tr>
+              <td>Total estimated pay</td>
+              <td>£4,282.20</td>
+            </tr>
+            <tr>
+              <td>Tell the mother’s employer</td>
+              <td>28 days before they want to start maternity pay</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+        <h2 class="heading-medium">Icons</h2>
+
+        <h3 class="heading-small">Calender</h3>
+
+        <div class="example">
+          <i class="icon icon-calendar">
+            <span class="visuallyhidden">Calender</span>
+          </i>
+        </div>
+
+        <h3 class="heading-small">Download</h3>
+
+        <div class="example">
+          <i class="icon icon-file-download">
+            <span class="visuallyhidden">Download</span>
+          </i>
+        </div>
+
+        <h3 class="heading-small">Important</h3>
+
+        <div class="example">
+          <i class="icon icon-important">
+            <span class="visuallyhidden">Important</span>
+          </i>
+        </div>
+
+        <h3 class="heading-small">Information</h3>
+
+        <div class="example">
+          <i class="icon icon-information">
+            <span class="visuallyhidden">Information</span>
+          </i>
+        </div>
+
+        <h3 class="heading-small">Locator</h3>
+
+        <div class="example">
+          <i class="icon icon-locator">
+            <span class="visuallyhidden">Locator</span>
+          </i>
+        </div>
+
+
+        <h2 class="heading-medium">Forms</h2>
+
+        <h3 class="heading-small">Text input</h3>
+
+        <div class="example">
+          <label class="form-label" for="full-name-f1">Full name</label>
+          <input class="form-control" id="full-name-f1" type="text">
+        </div>
+
+        <h3 class="heading-small">Text input with hint</h3>
+
+        <div class="example">
+          <label class="form-label" for="ni-number">
+            National Insurance number
+            <span class="form-hint">It'll be on your last payslip. For example, JH 21 90 0A.</span>
+          </label>
+          <input class="form-control" id="ni-number" type="text">
+        </div>
+
+        <h3 class="heading-small">Text input with inline checkboxes</h3>
+
+        <div class="example">
+          <label class="form-label" for="telephone-number">Enter your telephone number</label>
+          <input class="form-control" id="telephone-number" name="telephone-number" type="text">
+          <label class="form-checkbox" for="checkbox-telephone-number">
+            <input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
+            I need to be contacted using a text phone
+          </label>
+        </div>
+
+        <h3 class="heading-small">Textarea</h3>
+
+        <div class="example">
+          <label class="form-label" for="textarea">Multi-line text fields</label>
+          <textarea class="form-control" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+
+        <h3 class="heading-small">Select dropdown list</h3>
+
+        <div class="example">
+          <label class="form-label" for="select-box">Drop down content</label>
+          <select class="form-control" id="select-box">
+            <option>Banana</option>
+            <option>Cherry</option>
+            <option>Lemon</option>
+          </select>
+        </div>
+
+        <h3 class="heading-small">Inline radio buttons</h3>
+
+        <div class="example">
+          <fieldset class="inline">
+
+            <legend>Do you already have a personal user account?</legend>
+
+            <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+              No
+            </label>
+
+          </fieldset>
+        </div>
+
+        <h3 class="heading-small">Stacked radio buttons</h3>
+
+        <div class="example">
+          <h2 class="heading-medium">Where do you live?</h2>
+
+          <form>
+            <fieldset>
+
+              <legend class="visuallyhidden">Where do you live?</legend>
+
+              <label class="block-label" for="radio-1">
+                <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+                Northern Ireland
+              </label>
+              <label class="block-label" for="radio-2">
+                <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+                Isle of Man or the Channel Islands
+              </label>
+              <p class="form-block">or</p>
+              <label class="block-label" for="radio-3">
+                <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+                I am a British citizen living abroad
+              </label>
+
+            </fieldset>
+          </form>
+        </div>
+
+        <h3 class="heading-small">Stacked checkboxes</h3>
+
+        <div class="example">
+          <h3 class="heading-medium">Which types of waste do you transport regularly?</h3>
+          <p>Select all that apply</p>
+
+          <form>
+            <fieldset>
+
+              <legend class="visuallyhidden">Which types of waste do you transport regularly?</legend>
+
+              <label class="block-label" for="waste-type-1">
+                <input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+                Waste from animal carcasses
+              </label>
+              <label class="block-label" for="waste-type-2">
+                <input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+                Waste from mines or quarries
+              </label>
+              <label class="block-label" for="waste-type-3">
+                <input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+                Farm or agricultural waste
+              </label>
+
+            </fieldset>
+          </form>
+        </div>
+
+        <h3 class="heading-small">Stacked multiline checkboxes</h3>
+
+        <div class="example">
+          <h1 class="heading-medium">
+            Which part of the Housing Act was your licence isued under?
+          </h1>
+          <p>
+            Select one of the options below.
+          </p>
+          <div class="form-group">
+            <fieldset>
+
+              <legend class="visuallyhidden">
+                Which part of the Housing Act was your licence isued under?
+              </legend>
+
+              <label for="radio-part-2" class="block-label selected">
+                <input id="radio-part-2" type="radio" name="housing-act" value="Part 2" aria-expanded="false">
+                <span class="heading-small">Part 2 of the Housing Act 2004</span><br>
+                For properties that are 3 or more stories high and occupied by 5 or more people
+              </label>
+
+              <label for="radio-part-3" class="block-label">
+                <input id="radio-part-3" type="radio" name="housing-act" value="Part 3" aria-expanded="false">
+                <span class="heading-small">Part 3 of the Housing Act 2004</span><br>
+                For properties that are within a geographical area defined by a local council
+              </label>
+
+            </fieldset>
+          </div>
+
+        </div>
+
+
+        <h3 class="heading-small">Inline checkboxes</h3>
+
+        <div class="example">
+          <label class="form-checkbox" for="text-phone">
+            <input id="text-phone" name="text-phone" type="checkbox" value="true">
+            I need to be contacted using a text phone
+          </label>
+        </div>
+
+        <h3 class="heading-small">Radio buttons with conditionally revealing content</h3>
+
+        <div class="example">
+          <h1 class="heading-medium">
+            Do you know their National Insurance number?
+          </h1>
+
+          <form>
+            <fieldset class="inline">
+
+              <legend class="visuallyhidden">Do you know their National Insurance number?</legend>
+
+              <div class="form-group">
+
+                <label class="block-label" data-target="example-ni-no" for="radio-indent-1">
+                  <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
+                  Yes
+                </label>
+
+                <label class="block-label" for="radio-indent-2">
+                  <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
+                  No
+                </label>
+
+                <div class="panel panel-border-narrow js-hidden" id="example-ni-no">
+                  <label class="form-label" for="national-insurance">National Insurance number</label>
+                  <input class="form-control" name="national-insurance" type="text" id="national-insurance">
+                </div>
+
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+
+        <h3 class="heading-small">Checkboxes buttons with conditionally revealing content</h3>
+
+        <div class="example">
+          <h1 class="heading-medium">
+            What is your nationality?
+          </h1>
+          <p>
+            Select all options that are relevant to you.
+          </p>
+
+          <form>
+            <fieldset>
+
+              <legend class="visuallyhidden">What is your nationality?</legend>
+
+              <div class="form-group">
+                <label class="block-label" for="nationalities-british">
+                  <input id="nationalities-british" name="nationalities" type="checkbox" value="British">
+                  British
+                </label>
+                <label class="block-label" for="nationalities-irish">
+                  <input id="nationalities-irish" name="nationalities" type="checkbox" value="Irish">
+                  Irish
+                </label>
+                <label class="block-label" for="nationalities-other" data-target="example-different-country">
+                  <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country">
+                  Citizen of a different country
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+                  <label class="form-label" for="nationalities-other-country">Country name</label>
+                  <input class="form-control" type="text" id="nationalities-other-country" name="nationalities-other-country">
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+
+        <h3 class="heading-small">Date of birth</h3>
+
+        <div class="example">
+            <h4 class="heading-small">What is your date of birth?</h4>
+
+            <fieldset>
+
+              <legend class="visuallyhidden">What is your date of birth?</legend>
+
+              <div class="form-date">
+
+                <p class="form-hint">For example, 31 3 1980</p>
+
+                <div class="form-group form-group-day">
+                  <label for="dob-day">Day</label>
+                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                </div>
+
+                <div class="form-group form-group-month">
+                  <label for="dob-month">Month</label>
+                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+
+                <div class="form-group form-group-year">
+                  <label for="dob-year">Year</label>
+                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+
+            </fieldset>
+        </div>
+
+        <h3 class="heading-small">Address</h3>
+
+        <div class="example">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Address
+            </legend>
+
+            <div class="form-group form-group-compound">
+              <label class="form-label" for="address-line-1">Street</label>
+              <input type="text" class="form-control" id="address-line-1">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label visuallyhidden" for="address-line-2">Street</label>
+              <input type="text" class="form-control" id="address-line-2">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="address-town">Town or City</label>
+              <input type="text" class="form-control form-control-1-4" id="address-town">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="address-postcode">Postcode</label>
+              <input type="text" class="form-control form-control-1-8" id="address-postcode">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <h2 class="heading-medium">Form errors</h2>
+
+        <h3 class="heading-small">Error summary box</h3>
+        <div class="example">
+          <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+
+            <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+              Message to alert the user to a problem goes here
+            </h1>
+
+            <p>
+              Optional description of the errors and how to correct them
+            </p>
+
+            <ul class="error-summary-list">
+              <li><a href="#example-personal-details">Descriptive link to the question with an error</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <h3 class="heading-small">Error message - radio buttons</h3>
+        <div class="example">
+          <div class="form-group error">
+            <fieldset>
+
+              <legend id="example-personal-details">
+
+                <span class="form-label-bold">
+                  Are your personal details correct and up-to-date?
+                </span>
+                <span class="error-message">
+                  Error message about personal details goes here
+                </span>
+
+              </legend>
+
+              <label class="block-label" for="personal_details_yes">
+                <input id="personal_details_yes" type="radio" name="personal_details" value="Yes">
+                <span></span> Yes, my personal details are correct
+              </label>
+
+              <label class="block-label" for="personal_details_no">
+                <input id="personal_details_no" type="radio" name="personal_details" value="No">
+                <span></span> No, some details are wrong or have changed
+              </label>
+
+            </fieldset>
+          </div>
+        </div>
+
+        <h3 class="heading-small">Error message - text input</h3>
+        <div class="example">
+          <div class="form-group error">
+
+            <label for="example-full-name" id="error-full-name">
+
+              <span class="form-label-bold">Full name</span>
+              <span class="form-hint">As shown on your birth certificate or passport</span>
+              <span class="error-message" id="error-message-full-name">Error message about full name goes here</span>
+
+            </label>
+
+            <input class="form-control" id="example-full-name" type="text" name="fullName" value="" aria-describedby="error-message-full-name">
+          </div>
+        </div>
+
+        <h2 class="heading-medium">Phase banners</h2>
+
+        <h3 class="heading-small">Alpha banner</h3>
+        <div class="example">
+          <div class="phase-banner-alpha">
+            <p>
+              <strong class="phase-tag">ALPHA</strong>
+              <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+            </p>
+          </div>
+        </div>
+
+        <h3 class="heading-small">Beta banner</h3>
+        <div class="example">
+          <div class="phase-banner-beta">
+            <p>
+              <strong class="phase-tag">BETA</strong>
+              <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+            </p>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>
+
+
+{% endblock %}
