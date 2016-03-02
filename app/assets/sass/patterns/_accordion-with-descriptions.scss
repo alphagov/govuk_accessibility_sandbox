@@ -118,7 +118,6 @@
 
 }
 
-// This will sit in government frontend, hence reverting BEM syntax in Demo 2
 .accordion-with-descriptions-02 {
   // Make open and close buttons look like links
   .subsection-controls {
@@ -327,4 +326,115 @@
     }
   }
 
+}
+
+// This will sit in government frontend, hence reverting BEM syntax in Demo 4
+.accordion-with-descriptions-04 {
+
+  // Make open and close buttons look like links
+  .subsection-controls {
+    @extend %contain-floats;
+  }
+
+  .subsection-controls button {
+    float: right;
+
+    @include core-16;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: $link-colour;
+    text-decoration: underline;
+
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  // Subsections
+
+  .subsection-wrapper {
+    border-top: 1px solid $border-colour;
+  }
+
+  .subsection {
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid $border-colour;
+  }
+
+  .subsection-button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    background: #FFF;
+    padding: 1em 0;
+    &:hover {
+      cursor: pointer;
+      background: $highlight-colour;
+    }
+  }
+
+
+  .subsection-title {
+    @include bold-19;
+    color: $govuk-blue;
+    padding-top: 1em;
+  }
+  .subsection-title:hover {
+    cursor: pointer;
+  }
+  .subsection-title:focus {
+    outline: 3px solid $focus-colour;
+  }
+
+  .subsection-description {
+    display: block;
+    @include core-16;
+    color: $secondary-text-colour;
+  }
+
+
+  .subsection-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    height: 16px;
+    width: 16px;
+
+    // https://css-tricks.com/a-complete-guide-to-svg-fallbacks/
+    // PNG fallback for SVG (does this work in IE7?)
+    background-image: url('/public/images/accordion-with-descriptions/icons.png');
+    // SVG sprite
+    background: url("/public/images/accordion-with-descriptions/icons.svg"), linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+
+    display: none;
+
+  }
+
+  .js-enabled .subsection-icon {
+    display: block;
+  }
+
+  .is-open .subsection-icon {
+    background-position: 0 0;
+  }
+
+  .is-closed .subsection-icon {
+    background-position: 0 -16px;
+  }
+
+  .subsection-items {
+    padding-bottom: 0.5em;
+  }
+
+  .subsection-items li {
+    margin-bottom: 0.25em;
+  }
+
+  .subsection-items li a {
+    text-decoration: none;
+  }
 }
