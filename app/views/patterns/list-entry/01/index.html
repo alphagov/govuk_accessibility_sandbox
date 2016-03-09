@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+List entry - Test Case 1
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+  {{ macro.breadcrumb([
+    {
+      url: "/patterns/list-entry/",
+      title: "Autocomplete"
+    }]
+  )}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        List entry - Test Case 1
+      </h1>
+
+      <h2 class="heading-medium">Test Case - Digital Marketplace list entry</h2>
+
+
+      <div class="test-case test-case-overflow-allowed">
+
+        <form class="form">
+
+          <div class="form-group ui-front">
+              <fieldset class="question " id="serviceFeatures">
+                  <legend>
+                    <span class="question-heading question-heading-with-hint">
+                      Service features
+                    </span>
+                    
+                      <span class="hint">
+                        Include the technical features of your product, eg graphical workflow, remote access. (Maximum 10 words per feature. Maximum 10 features.)
+                      </span>
+                    
+                  </legend>
+                  <div class="input-list" data-list-item-name="service feature" id="list-entry-serviceFeatures">
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-0" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>1.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-0" class="text-box" value="One">
+                      </div>
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-1" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>2.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-1" class="text-box" value="Two">
+                      </div>
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-2" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>3.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-2" class="text-box" value="Three">
+                      </div>
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-3" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>4.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-3" class="text-box" value="">
+                      </div>
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-4" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>5.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-4" class="text-box" value="">
+                      </div>
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-5" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>6.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-5" class="text-box" value="">
+                      </div>
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-6" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>7.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-6" class="text-box" value="">
+                      </div>
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-7" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>8.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-7" class="text-box" value="">
+                      </div>
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-8" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>9.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-8" class="text-box" value="">
+                      </div>
+                    
+                      <div class="list-entry">
+                        <label for="input-serviceFeatures-9" class="text-box-number-label">
+                          <span class="visuallyhidden">service feature number </span>10.
+                        </label>
+                        <input type="text" name="serviceFeatures" id="input-serviceFeatures-9" class="text-box" value="">
+                      </div>
+                    
+                  </div>
+                </fieldset>
+          </div>
+
+        </form>
+
+      </div>
+
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen Magnifier / ZoomText</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Speech Recognition / Dragon</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">No Javascript and no CSS</h4>
+      <p>Awating result</p>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block body_end %}
+{{ super() }}
+  <!-- Country selector -->
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/vendor/hogan-3.0.2.min.js"></script>
+  <script src="/public/javascripts/patterns/list-entry/01/list-entry.js"></script>
+
+  <script>
+    GOVUK.GDM.listEntry();
+  </script>
+{% endblock %}
+
