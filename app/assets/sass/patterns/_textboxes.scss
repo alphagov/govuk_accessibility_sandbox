@@ -1,0 +1,98 @@
+@import "_colours.scss";
+@import "_conditionals.scss";
+@import "_typography.scss";
+@import "_css3.scss";
+@import "_shims.scss";
+
+%text-box,
+.text-box {
+  @include core-19;
+  @include box-sizing(border-box);
+  display: block;
+  height: 50px;
+  margin: 0 0 15px 0;
+  padding: 5px;
+  border: 2px solid $secondary-text-colour;
+  width: 100%;
+
+  /* IE<8 cannot include borders and padding as part of width */
+  @include ie-lte(7) {
+    width: 98%;
+  }
+}
+
+%text-box-error {
+  border: 5px solid $red;
+  margin-bottom: 0;
+}
+
+.text-box-with-error {
+  @extend %text-box;
+  @extend %text-box-error;
+}
+
+.text-box-medium {
+  height: 6.25em;
+}
+
+%text-box-large,
+.text-box-large {
+  height: 10.25em;
+}
+
+.text-box-large-with-error {
+  @extend %text-box-large;
+  @extend %text-box-error;
+}
+
+.text-box-smaller {
+  @extend %text-box;
+  width: 7em;
+}
+
+%text-box-with-unit {
+  @extend .text-box-smaller;
+  @include inline-block;
+}
+
+%text-box-with-unit-before,
+.text-box-with-unit-before {
+  @extend %text-box-with-unit;
+  margin-left: -40px;
+  padding-left: 30px;
+}
+
+%text-box-with-unit-after,
+.text-box-with-unit-after {
+  @extend %text-box-with-unit;
+  text-align: right;
+  margin-right: -40px;
+  padding-right: 30px;
+}
+
+.text-box-unit {
+  @include inline-block;
+  color: $secondary-text-colour;
+  @include core-19;
+  font-weight: bold;
+  width: 40px;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+  text-align: center;
+}
+
+.text-box-with-unit-before-with-error {
+  @extend %text-box-with-unit-before;
+  @extend %text-box-error;
+}
+
+.text-box-with-unit-after-with-error {
+  @extend %text-box-with-unit-after;
+  @extend %text-box-error;
+}
+
+.text-box-unit-qualifier {
+  position: absolute;
+  left: -9999em;
+}
