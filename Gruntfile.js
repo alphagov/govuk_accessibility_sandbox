@@ -84,6 +84,15 @@ module.exports = function(grunt){
           dest: 'app/assets/sass/'
         }]
       },
+      vendor_js: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules',
+          flatten: true,
+          src: ['hogan.js/dist/hogan-3.0.2.min.js'],
+          dest: 'app/assets/javascripts/vendor'
+        }]
+      }
     },
 
     // Watches assets and sass for changes
