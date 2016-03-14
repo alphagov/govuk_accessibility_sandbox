@@ -26,6 +26,11 @@ div.test-case-overflow-allowed {
     @include ie-lte(7) {
       zoom: 1;
     }
+
+    @include media(tablet) {
+      width: 78%;
+    }
+
   }
 
   .list-entry-remove {
