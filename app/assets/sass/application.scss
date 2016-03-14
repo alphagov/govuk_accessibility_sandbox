@@ -48,6 +48,7 @@ main {
 }
 
 .heading-xsmall {
+  margin: 1em 0 0 0;
   @include bold-16();
 }
 
@@ -58,6 +59,19 @@ main {
   padding: 20px;
   margin-bottom: 20px;
   overflow: hidden;
+}
+
+.screenshot {
+  position: relative;
+}
+.screenshot__heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 0 5px;
+  @include bold-16();
 }
 
 .screenshot img {
