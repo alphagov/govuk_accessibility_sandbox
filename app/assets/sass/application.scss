@@ -61,6 +61,12 @@ main {
   overflow: hidden;
 }
 
+.test-case {
+  .heading-medium {
+    margin-top: 0;
+  }
+}
+
 .screenshot {
   position: relative;
 }
