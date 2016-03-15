@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Question page - multiple questions - test case 1
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {{ macro.breadcrumb([
+    {
+      url: "/pages/question-multiple/",
+      title: "Question page - multiple questions"
+    }]
+  )}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="form-group ">
+        <form method="post" action="/errors/example-form-validation-multiple-questions">
+
+          <h1 class="heading-large">
+            Your personal details
+          </h1>
+
+          <div class="form-group ">
+
+            <label for="example-full-name" >
+
+              <span class="form-label-bold">Full name</span>
+              <span class="form-hint">As shown on your birth certificate or passport</span>
+
+            </label>
+
+            <input class="form-control" id="example-full-name" type="text" name="fullName" value="" >
+          </div>
+
+          <fieldset class="form-group">
+            <legend>
+              <span class="form-label-bold">Date of birth</span>
+            </legend>
+            <div class="form-date">
+
+              <p class="form-hint">For example, 31 3 1980</p>
+
+              <div class="form-group form-group-day">
+                <label for="dob-day">Day</label>
+                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+              </div>
+
+              <div class="form-group form-group-month">
+                <label for="dob-month">Month</label>
+                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+
+              <div class="form-group form-group-year">
+                <label for="dob-year">Year</label>
+                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+              </div>
+
+            </div>
+          </fieldset>
+
+          <input class="button" type="submit" value="Continue">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen Magnifier / ZoomText</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Speech Recognition / Dragon</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">No Javascript and no CSS</h4>
+      <p>Awating result</p>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
