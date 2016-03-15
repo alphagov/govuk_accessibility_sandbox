@@ -99,3 +99,18 @@ main {
     list-style-type: none;
   }
 }
+
+.check-your-answers {
+
+  td {
+    @include core-19;
+    vertical-align: top;
+  }
+
+  .change-answer {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 0;
+  }
+
+}
