@@ -1,0 +1,197 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Check your answers page - Test Case 1
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {{ macro.breadcrumb([
+    {
+      url: "/pages/check-your-answers/",
+      title: "Check your answers page"
+    }]
+  )}}
+
+  <h1 class="heading-large">
+    Check your answers before sending your application
+  </h1>
+
+  <table class="check-your-answers">
+
+    <thead>
+    <tr>
+      <th colspan="2">
+        <h2 class="heading-medium">
+          Organisations involved
+        </h2>
+      </th>
+      <th>
+      </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td>
+        Exporter
+      </td>
+      <td>
+        Exporter name<br>
+        First line of address<br>
+        Second line of address<br>
+        Contact: Contact Name<br>
+        Tel: 01234 567 890<br>
+        Email: email@email.com
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">Exporter name</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Producer
+      </td>
+      <td>
+        Producer name
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">Producer name</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Site of export
+      </td>
+      <td>
+        Site of export name
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">Site of export name</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Importer
+      </td>
+      <td>
+        Importer name<br>
+        First line of address<br>
+        Second line of address<br>
+        Contact: Contact Name<br>
+        Tel: 01234 567 890<br>
+        Email: email@email.com
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">Importer name</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Recovery facilities
+      </td>
+      <td>
+        Recovery facilities name
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">Recovery facilities name</span>
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Recovery site
+      </td>
+      <td>
+        Recovery site name
+      </td>
+      <td class="change-answer">
+        <a href="#">
+          Change <span class="visuallyhidden">Recovery site name</span>
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h2 class="heading-medium">Now send your application</h2>
+
+  <p class="text">
+    By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+  </p>
+
+  <a href="/pages/confirmation/" class="button">Accept and send application</a>
+
+  <hr/>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen Magnifier / ZoomText</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Speech Recognition / Dragon</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">No Javascript and no CSS</h4>
+      <p>Awating result</p>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
