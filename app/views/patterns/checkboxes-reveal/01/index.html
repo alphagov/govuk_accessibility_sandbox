@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Conditionally revealing content (checkboxes) - Test Case 1
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+  {{ macro.breadcrumb([
+    {
+      url: "/patterns/checkboxes-reveal/",
+      title: "Conditionally revealing content (checkboxes)"
+    }]
+  )}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Conditionally revealing content (checkboxes) - Test Case 1
+      </h1>
+
+      <h2 class="heading-medium">Test Case - GOV.UK Elements</h2>
+
+      <div class="test-case">
+        <h1 class="heading-medium">
+          What is your nationality?
+        </h1>
+        <p>
+          Select all options that are relevant to you.
+        </p>
+
+        <form>
+          <fieldset>
+            <legend class="visuallyhidden">What is your nationality?</legend>
+
+            <div class="form-group">
+              <label class="block-label" for="nationalities-british">
+                <input id="nationalities-british" name="nationalities" type="checkbox" value="British">
+                British
+              </label>
+              <label class="block-label" for="nationalities-irish">
+                <input id="nationalities-irish" name="nationalities" type="checkbox" value="Irish">
+                Irish
+              </label>
+              <label class="block-label" for="nationalities-other" data-target="example-different-country">
+                <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country">
+                Citizen of a different country
+              </label>
+              <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+                <label class="form-label" for="nationalities-other-country">Country name</label>
+                <input class="form-control" type="text" id="nationalities-other-country" name="nationalities-other-country">
+              </div>
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+
+      <h2 class="heading-medium">Implementation details</h2>
+
+      <p>to do</p>
+
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen Magnifier / ZoomText</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Speech Recognition / Dragon</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">No Javascript and no CSS</h4>
+      <p>Awating result</p>
+    </div>
+  </div>
+</main>
+{% endblock %}
