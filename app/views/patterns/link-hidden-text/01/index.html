@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Link with visually hidden text - Test Case 1
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+  {{ macro.breadcrumb([
+    {
+      url: "/patterns/link-hidden-text/",
+      title: "Link with visually hidden text"
+    }]
+  )}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Link with visually hidden text - Test Case 1
+      </h1>
+
+      <h2 class="heading-medium">Test Case - Prototype kit</h2>
+
+      <div class="test-case">
+        <p>
+          <a href="https://www.registertovote.service.gov.uk/register-to-vote/country-of-residence">
+            Change <span class="visuallyhidden">country of residence</span>
+          </a>
+        </p>
+      </div>
+
+      <h2 class="heading-medium">Implementation details</h2>
+
+      <p>to do</p>
+
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS)</h4>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Screen Magnifier / ZoomText</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Speech Recognition / Dragon</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awating result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awating result</p>
+
+      <h4 class="heading-xsmall">No Javascript and no CSS</h4>
+      <p>Awating result</p>
+    </div>
+  </div>
+</main>
+{% endblock %}
