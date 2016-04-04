@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Disclosure - Test Case 1
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+  {{ macro.breadcrumb([
+    {
+      url: "/patterns/dialog/",
+      title: "Dialog / modal / lightbox"
+    }]
+  )}}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Dialog - test case 1
+      </h1>
+
+      <h2 class="heading-medium">Test case - Details and summary elements and polyfill</h2>
+
+      <div class="test-case">
+        <button class="dialog-button button dialog-open">Open dialog</button>
+        <dialog class="dialog" role="dialog" aria-labelledby="dialog-title">
+
+          <h1 id="dialog-title">This is the dialog heading</h1>
+          <p>This is a dialog paragraph.</p>
+          <button class="button dialog-close dialog-button">Close dialog</button>
+        </dialog>
+        {# <div class="dialog-fallback">
+          <h2 class="heading-medium">JS fallback for dialog</h2>
+          <p>Javascript not available. No dialog for you :(</p>
+        </div> #}
+      </div>
+
+      <h2 class="heading-medium">Implementation details</h2>
+      <p>This is the native html dialog element with a javascript polyfil to make it work in browsers that do not natively support it.</p>
+
+      <p>Requires javascript so would need a non-js fallback. Test case displays the content in-page if javascript is not available.</p>
+
+      <p>Can be dismissed using UI or with esc key.</p>
+
+      <p>Uses the <a href="https://github.com/GoogleChrome/dialog-polyfill">Google Chrome polyfill</a> polyfil for dialog.</p>
+
+      <h2 class="heading-medium">Results</h2>
+
+      <h3 class="heading-small">Colour blindness</h3>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Colour contrast</h3>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Inverted Colours</h3>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Increased font size</h3>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Hit area</h3>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Keyboard only (chrome)</h3>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Screen readers</h3>
+
+      <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
+      <p>Awaiting result</p>
+
+      <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
+      <p>Awaiting result</p>
+
+      <h4 class="heading-xsmall">NVDA / Firefox</h4>
+      <p>Awaiting result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
+      <p>Awaiting result</p>
+
+      <h4 class="heading-xsmall">VoiceOver / Safari (iOS 9.2.1)</h4>
+      <p>Awaiting result</p>
+
+      <h4 class="heading-xsmall">Talkback / Firefox (Android Lollipop)</h4>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Screen Magnifier / ZoomText</h3>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Speech Recognition / Dragon</h3>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Valid markup</h3>
+      <p>Awaiting result</p>
+
+      <h3 class="heading-small">Progressive Enhancement</h3>
+
+      <h4 class="heading-xsmall">No Javascript</h4>
+      <p>Awaiting result</p>
+
+      <h4 class="heading-xsmall">No Javascript and no CSS</h4>
+      <p>Awaiting result</p>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block body_end %}
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/dialog-polyfill.0.4.3-01.js"></script>
+<script>
+  
+  // Locate dialog
+  var dialog = document.querySelector('dialog');
+
+  // Register dialog (once per dialog)
+  dialogPolyfill.registerDialog(dialog);
+
+  // Register clicks
+  $(".dialog-open").click(function(e){
+    dialog.showModal();
+    console.log("Dialog opened");
+  });
+
+  // Dialog closed using button
+  $(".dialog-close").click(function(e){
+    console.log("Dialog closed explictly");
+    dialog.close();
+  });
+  
+  dialog.addEventListener('cancel', function() {
+    console.log('Dialog canceled');
+  });
+
+  // dialog.addEventListener('close', function() {
+  //   console.log('Dialog closed');
+  // });
+
+</script>
+{% endblock %}
