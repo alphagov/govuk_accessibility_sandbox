@@ -90,9 +90,13 @@ dialog[open] {
   }
 }
 
-.js-enabled {
+// JS Disabled
+.dialog-button {
+  display: none;
+}
 
   // JS Enabled
+.js-enabled {
   .dialog-button {
     display: block;
   }
@@ -103,13 +107,9 @@ dialog[open] {
     display: block;
     position: absolute;
   }
-
-  // JS Disabled
-  @at-root {
-    .dialog-button {
-      display: none;
-    }
-  }
-  
 }
 
+// Stop background scrolling while dialog open.
+.dialog-is-open {
+  overflow: hidden;
+}

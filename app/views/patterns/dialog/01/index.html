@@ -121,6 +121,7 @@ Disclosure - Test Case 1
 
   // Register clicks
   $(".dialog-open").click(function(e){
+    $("body").addClass("dialog-is-open");
     dialog.showModal();
     console.log("Dialog opened");
   });
@@ -135,9 +136,10 @@ Disclosure - Test Case 1
     console.log('Dialog canceled');
   });
 
-  // dialog.addEventListener('close', function() {
-  //   console.log('Dialog closed');
-  // });
+  dialog.addEventListener('close', function() {
+    $("body").removeClass("dialog-is-open");
+    // console.log('Dialog closed');
+  });
 
 </script>
 {% endblock %}
