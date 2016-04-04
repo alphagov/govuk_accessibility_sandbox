@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-Text input - Test Case 1
+Text input - Test Case 2
 {% endblock %}
 
 {% block content %}
@@ -18,7 +18,7 @@ Text input - Test Case 1
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
-        Text input - Test Case 1
+        Text input - Test Case 2
       </h1>
 
       <h2 class="heading-medium">Test Case - GOV.UK Elements</h2>
@@ -26,14 +26,15 @@ Text input - Test Case 1
 
       <div class="test-case">
         <form class="form">
-          <label class="form-label" for="full-name-f1">Full name</label>
+          <label class="form-label">Full name
           <input class="form-control" id="full-name-f1" type="text">
+		  </label>
         </form>
       </div>
 
       <h2 class="heading-medium">Implementation details</h2>
 
-      <p>The <code>&lt;label&gt;</code> element is associated with the <code>&lt;input&gt;</code> using the <code>for</code> and <code>id</code> attribute pairing.</p>
+      <p>The <code>&lt;label&gt;</code> element is wrapped around the <code>&lt;input&gt;</code>.</p>
 
       <h2 class="heading-medium">Results</h2>
 
