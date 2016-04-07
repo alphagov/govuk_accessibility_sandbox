@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Dialog  
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+  {{ macro.breadcrumb() }}
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <h1 class="heading-xlarge">
+                Dialog / modal / lightbox
+            </h1>
+
+            <h2 class="heading-medium">What is it?</h2>
+
+            <p>A modal dialog box. Used for warnings / messages / information where you don't want to take the user away from the current page.</p>
+
+            <div class="screenshot">
+                <img src="/public/images/dialog/screenshot.png" width="495" height="225" alt="Screen shot of accordion" />
+            </div>
+
+            <h2 class="heading-medium">Accessibility success criteria</h2>
+
+            <h2 class="heading-medium">Test Cases</h2>
+            <ul class="list list-bullet">
+              <li><a href="01/">1 - HTML dialog element with polyfill</a></li>
+            </ul>
+
+            <h2 class="heading-medium">Further reading</h2>
+            <ul>
+                <li><a href="https://designpatterns.hackpad.com/Modal-dialog-boxes-ZJNqssq4Dll">Design pattern: Modal dialog boxes</a></li>
+            </ul>
+
+        </div>
+    </div>
+</main>
+{% endblock %}
