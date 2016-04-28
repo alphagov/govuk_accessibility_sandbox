@@ -1,39 +1,35 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-Text input - Test Case 6
+Number input - Test Case 1
 {% endblock %}
 
 {% block content %}
 <main id="content" role="main" tabindex="-1">
 
-  {{ macro.breadcrumb([
-    {
-      url: "/patterns/text-input/",
-      title: "Text input"
-    }]
-  )}}
+{{ macro.breadcrumb([
+{
+url: "/patterns/text-input/",
+title: "Text input"
+}]
+)}}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
+<div class="grid-row">
+<div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        Text input - Test Case 6
-      </h1>
+<h1 class="heading-xlarge">Number input - Test Case 1</h1>
 
-      <h2 class="heading-medium">Test Case - GOV.UK Elements</h2>
+<h2 class="heading-medium">Test Case - GOV.UK Elements</h2>
 
+<div class="test-case">
+<form class="form">
+<label class="form-label" for="num">Enter a number</label>
+<input class="form-control" id="num" type="number">
+</form>
+</div>
 
-      <div class="test-case">
-        <form class="form">
-          <label class="form-label" for="full-name-f1">Full name</label>
-          <input class="form-control" id="full-name-f1" type="text" aria-invalid="true">
-        </form>
-      </div>
-
-      <h2 class="heading-medium">Implementation details</h2>
-
-      <p>The <code>&lt;label&gt;</code> element is associated with the <code>&lt;input&gt;</code> using the <code>for</code> and <code>id</code> attribute pairing. The <code>aria-invalid</code> attribute is used to indicate that the field is invalid.</p>
+<h2 class="heading-medium">Implementation details</h2>
+<p>The <code>&lt;input&gt;</code> has <code>type="number"</code>.</p>
 
       <h2 class="heading-medium">Results</h2>
 
@@ -58,17 +54,13 @@ Text input - Test Case 6
       <h3 class="heading-small">Screen readers</h3>
 
       <h4 class="heading-xsmall">Jaws 16 / IE 11</h4>
-      <p>Supported.
-	  <br>
-	  Jaws announces the label, field type and required state.</p>
+      <p>Awaiting result</p>
 
       <h4 class="heading-xsmall">Jaws 13 / IE 9</h4>
-            <p>Awaiting result</p>
-			
+      <p>Awaiting result</p>
+
       <h4 class="heading-xsmall">NVDA / Firefox</h4>
-      <p>Supported.
-	  <br>
-	  NVDA announces the label, field type and required state.</p>
+      <p>Awaiting result</p>
 
       <h4 class="heading-xsmall">VoiceOver / Safari (OS X)</h4>
       <p>Awaiting result</p>
@@ -86,12 +78,12 @@ Text input - Test Case 6
       <p>Awaiting result</p>
 
       <h3 class="heading-small">Valid markup</h3>
-      <p>Confirmed.</p>
+      <p>Awaiting result</p>
 
       <h3 class="heading-small">Progressive Enhancement</h3>
 
       <h4 class="heading-xsmall">No Javascript</h4>
-      <p>Confirmed.</p>
+      <p>Awaiting result</p>
 
       <h4 class="heading-xsmall">No Javascript and no CSS</h4>
       <p>Awaiting result</p>

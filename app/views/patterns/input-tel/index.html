@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Tel input
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+
+{{ macro.breadcrumb() }}
+
+<div class="grid-row">
+<div class="column-two-thirds">
+
+<h1 class="heading-xlarge">Tel input</h1>
+
+<h2 class="heading-medium">What is it?</h2>
+
+<p>A simple telephone input.</p>
+
+<div class="screenshot">
+<h3 class="screenshot__heading">screenshot</h3>
+***TBC
+</div>
+
+<h2 class="heading-medium">Accessibility success criteria</h2>
+<p>The <a href="/patterns/input-text/">text input</a> test cases cover basic form interaction criteria.</p>
+<ul class="list list-bullet">
+<li>It must be possible to identify the field type using a screen reader</li>
+<li>It must be possible to enter a telephone number, or select a previously entered telephone number, using the keyboard</li>
+</ul>
+
+<h2 class="heading-medium">Test Cases</h2>
+
+<ul class="list list-bullet">
+<li><a href="/patterns/input-tel/01/">01 - telephone input</a></li>
+</ul></div>
+</div>
+</main>
+
+{% endblock %}
+
+
