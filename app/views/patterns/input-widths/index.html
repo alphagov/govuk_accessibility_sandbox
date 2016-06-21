@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Text input
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+
+{{ macro.breadcrumb() }}
+
+<div class="grid-row">
+<div class="column-two-thirds">
+
+<h1 class="heading-large">Form input widths in ems to allow them to grow when text is zoomed</h1>
+
+<form action="" method="POST">
+
+  <h3 class="heading-medium">Test case 1 - comparison of input widths set in percentage and ems</h2>
+
+  <p>Type test text in each and then increase font size to 200%.</p>
+
+  <div class="form-group">
+      <label class="form-label" for="input1_0">Name
+        <span class="form-hint">Class form-control-1-4 (test with 'Sam Tester-Smith')</span>
+      </label>
+      <input type="text" class="form-control form-control-1-4" id="input1_0" />
+  </div>
+
+  <div class="input_test">
+
+    <div class="form-group">
+        <label class="form-label" for="input1_1">Name
+          <span class="form-hint">Class form-control-char-15 (test with 'Sam Tester-Smith')</span>
+        </label>
+        <input type="text" class="form-control form-control-char-15" id="input1_1" />
+    </div>
+
+  </div>
+
+<h3 class="heading-medium">Test case 2 - inputs with widths set in ems</h2>
+
+  <div class="input_test">
+
+    <div class="form-group">
+        <label class="form-label" for="input0">Answer to secret question
+          <span class="form-hint">Not restricted</span>
+        </label>
+        <input type="text" class="form-control" id="input0" />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="input1">Email
+          <span class="form-hint">A long input expected, up to 50 characters (form-control-char-50)</span>
+        </label>
+        <input type="text" class="form-control form-control-char-50" id="input1" />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="input2">Organisation
+          <span class="form-hint">Long, but not huge, up to 35 characters (form-control-char-35)</span>
+        </label>
+        <input type="text" class="form-control form-control-char-35" id="input2" />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="input3">Name
+          <span class="form-hint">Average length, up to 25 characters (form-control-char-25)</span>
+        </label>
+        <input type="text" class="form-control form-control-char-25" id="input3" />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="input4">Town
+          <span class="form-hint">Shorter, up to 15 characters (form-control-char-15)</span>
+        </label>
+        <input type="text" class="form-control form-control-char-15" id="input4" />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="input5">Postcode
+          <span class="form-hint">Very short, up to 10 characters (form-control-char-10)</span>
+        </label>
+        <input type="text" class="form-control form-control-char-10" id="input5" />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="input6">Reference number
+          <span class="form-hint">Tiny, up to 5 characters (form-control-char-5)</span>
+        </label>
+        <input type="text" class="form-control form-control-char-5" id="input6" />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="input7">Age
+          <span class="form-hint">Miniscule, up to 3 characters (form-control-char-3)</span>
+        </label>
+        <input type="text" class="form-control form-control-char-3" id="input7" />
+    </div>
+
+  </div>
+
+</form>
+
+<h2 class="heading-medium">Background</h2>
+<p>
+  Widths for single line text inputs are set in percentages of the container in the standard GOV.UK toolkit.
+  When text only is zoomed, the input does not grow, so any text entered may be hidden beyond the width of the input.
+</p>
+
+<p>
+  This suggested fix replaces the percentage widths with ems. Styles are then set with classes such as <span class="bold-small">form-control-char-35</span>.
+</p>
+
+<h3 class="heading-small">Advantages</h3>
+<p class="bold-small">
+  Assuming the community cannot find problems with this approach:
+</p>
+<ul class="list list-bullet">
+  <li>inputs scale with font size, so users browsing with larger font size don't have text clipped by the input box</li>
+  <li>class names follow likely character widths, so it's easier to set the expected length</li>
+  <li>it fits in with the aim to remove the 50% default width from existing styles</li>
+</ul>
+
+<p>Widths in ems and approximate characters are</p>
+<table>
+  <tr><th>Characters</th><th>Width in ems</th></tr>
+  <tr><td>50</td><td>26</td></tr>
+  <tr><td>35</td><td>18.5</td></tr>
+  <tr><td>25</td><td>13.5</td></tr>
+  <tr><td>15</td><td>8.5</td></tr>
+  <tr><td>10</td><td>6</td></tr>
+  <tr><td>5</td><td>3.5</td></tr>
+  <tr><td>3</td><td>2.5</td></tr>
+</table>
+
+
+<h2 class="heading-medium">Test results</h2>
+<p>
+  These styles have been tested in BrowserStack and seem to work OK.
+</p>
+
+<h3 class="heading-small">Suggested general test method</h3>
+<p>Objective: the page is readable and functional when the text size is doubled.</p>
+<h4>Method and tools</h4>
+<p>Important - use just text zoom and not page zoom (where everything gets proportionately larger).</p>
+<p>Tool: easiest way is to install Zoom Page add-in for Firefox:<br /> https://addons.mozilla.org/en-us/firefox/addon/zoom-page/</p>
+<p>View page and choose 200%.</p>
+<p>The test is - is the page still readable and functional? Typical problems are when boxes have a fixed height and text does not fit.</p>
+<h4>The test fails if:</h4>
+<ul class="list list-bullet">
+  <li>text inside input boxes is partly hidden</li>
+  <li>there is a horizontal scroll bar</li>
+  <li>text inside divs or HTML5 sections is clipped</li>
+</ul>
+
+<p>Guideline: 1.4.4 Resize text (Level AA)</p>
+
+
+</div>
+</div>
+</main>
+
+{% endblock %}

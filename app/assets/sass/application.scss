@@ -114,3 +114,143 @@ main {
   }
 
 }
+
+
+
+
+// Replacement width settings for form inputs
+
+// 5. Form controls
+// ==========================================================================
+
+// By default, form controls are 50% width for desktop,
+// and 100% width for mobile
+
+// In this prototype we've added a class to the containing DIV so these
+// form-control classes don't break previous versions
+div.input_test {
+
+  .form-control {
+    @include box-sizing(border-box);
+    @include core-19;
+    width: 100%;
+
+    padding: 4px;
+    background-color: $white;
+    border: 2px solid $grey-1;
+
+    // TODO: Remove 50% width set for tablet and up
+    // !! BREAKING CHANGE !!
+    // width set to auto to simulate removal
+    @include media(tablet) {
+      width: 100%;
+    }
+
+  }
+
+  // Radio buttons
+  .form-radio {
+    display: block;
+    margin: 10px 0;
+
+    input {
+      vertical-align: middle;
+      margin: -4px 5px 0 0;
+    }
+  }
+
+  // Checkboxes
+  .form-checkbox {
+    display: block;
+    margin: $gutter-half 0;
+
+    input {
+      vertical-align: middle;
+      margin: -2px 5px 0 0;
+    }
+  }
+
+
+
+
+
+  // 6. Form control widths
+  // ==========================================================================
+
+  // TODO: Update these
+  // Form control widths
+
+  // chars	width in ems
+  // 50	    26
+  // 35	    18.5
+  // 25	    13.5
+  // 15	    8.5
+  // 10	    6
+  // 5	    3.5
+  // 3	    2.5
+
+  .form-control-char-auto { // intended for select options that have pre-populated text
+    width: 100%;
+
+    @include media(tablet) {
+      width: auto;
+    }
+  }
+
+  .form-control-char-50 {
+    width: 100%;
+
+    @include media(tablet) {
+      width: 26em;
+    }
+  }
+
+  .form-control-char-35 {
+    width: 100%;
+
+    @include media(tablet) {
+      width: 18.5em;
+    }
+  }
+
+  .form-control-char-25 {
+    width: 100%;
+
+    @include media(tablet) {
+      width: 13.5em;
+    }
+  }
+
+  .form-control-char-15 {
+    width: 100%;
+
+    @include media(tablet) {
+      width: 8.5em;
+    }
+  }
+
+  .form-control-char-10 {
+    width: 100%;
+
+    @include media(tablet) {
+      width: 6em;
+    }
+  }
+
+  .form-control-char-5 {
+    width: 100%;
+
+    @include media(tablet) {
+      width: 3.5em;
+    }
+  }
+
+  .form-control-char-3 {
+    width: 100%;
+
+    @include media(tablet) {
+      width: 2.5em;
+    }
+  }
+
+} // end input_test
