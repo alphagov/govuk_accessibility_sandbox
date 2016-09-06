@@ -6,3 +6,5 @@ govuk_modules
 node_modules/*
 .idea/
 npm-debug.log
+app/assets/sass/elements/*
+app/assets/sass/_govuk-elements.scss
