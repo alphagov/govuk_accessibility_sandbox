@@ -77,14 +77,6 @@ module.exports = function (grunt) {
           dest: 'lib/'
         }]
       },
-      govuk_elements: {
-        files: [{
-          expand: true,
-          cwd: 'govuk_modules/govuk-elements-sass',
-          src: ['**'],
-          dest: 'app/assets/sass/'
-        }]
-      },
       vendor_js: {
         files: [{
           expand: true,
